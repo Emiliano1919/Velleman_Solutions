@@ -1,0 +1,3489 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, fancyhdr, color, comment, graphicx, environ}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{dsfont}
+\title{Velleman}
+\author{Emiliano}
+\date{March 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Exercises 1.1}
+\subsection{}
+\begin{enumerate}[label=(\alph*)]
+  \item $(Reading \vee  Homework) \wedge \neg(Homework \wedge Test )$
+  \item $ \neg Skiing \vee (Skiing \wedge \neg Snow) $
+  \item $\neg(\sqrt{7} < 2) \wedge \neg(\sqrt{7} = 2)$
+\end{enumerate}
+\subsection{}
+\begin {enumerate}[label=(\alph*)]
+  \item $(JohnTrue \wedge BillTrue) \vee (\neg JohnTrue \wedge \neg BillTrue)$
+  \item $(Fish\vee Chicken) \wedge \neg (Fish \wedge Potatos) $
+  \item $(3 commondiv 6) \wedge (3 commondiv 9) \wedge (3 commondiv 15)$
+\end{enumerate}
+\subsection{}
+\begin{enumerate}[label=(\alph*)]
+  \item $\neg (AliceRoom \wedge BobRoom)$
+  \item $(\neg AliceRoom \wedge \neg BobRoom)$
+  \item $(\neg AliceRoom \vee \neg BobRoom)$
+  \item $\neg( AliceRoom \vee  BobRoom)$
+\end{enumerate}
+\subsection{}
+\begin{enumerate}[label=(\alph*)]
+  \item $(RalphTall \wedge EdTall)\vee (RalphHandsome \wedge EdHandsome)$
+  \item $(RalphTall \vee RalphHandsome)\wedge (EdTall \vee EdHandsome)$
+  \item $\neg (RalphTall \wedge EdTall)\wedge \neg(RalphHandsome \wedge EdHandsome)$
+  \item $\neg (RalphTall \wedge EdTall)\vee \neg(RalphHandsome \wedge EdHandsome)$
+\end{enumerate}
+\subsection{}
+\begin{enumerate}[label=(\alph*)]
+  \item Correct
+  \item Incorrect %The , isn't used as a symbol for a conjunction
+  \item Correct
+  \item Incorrect %there must be an union between both statements (?)
+\end{enumerate}
+\subsection{}
+\begin{enumerate}[label=(\alph*)]
+  \item I will not buy the pants without a shirt.
+  \item I will neither buy the pants nor the shirt.
+  \item I will not buy the shirt or I will not buy the pants.
+\end{enumerate}
+\subsection{}
+\begin{enumerate}[label=(\alph*)]
+  \item Either the Taxes go up or the Deficit does.
+  \item Taxes and Deficit don't go up.
+  \item Either Taxes go up and Deficit don't or Deficit go up and Taxes don't.
+\end{enumerate}
+\section{Exercises 1.2}
+\subsection{}
+1. Make truth tables for the following formulas:
+
+(a) $\neg P \lor Q$
+
+(b) $(S \lor G) \land (\neg S \lor \neg G)$
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ P & Q & $\neg P \lor Q$ \\ [0.5ex] 
+ \hline\hline
+ F & F & TFT*F  \\ 
+ \hline
+ F & T & TFT*T  \\
+ \hline
+ T & F & FTF*F \\
+ \hline
+ T & T & FTT*T\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ S & G & $(S \lor G) \land (\neg S \lor \neg G)$ \\ [0.5ex] 
+ \hline\hline
+ F & F & FF-F F* TT-T \\ 
+ \hline
+ F & T & FT-T T* TT-F \\
+ \hline
+ T & F & TT-F T* FT-T \\
+ \hline
+ T & T & TT-T F* FF-F \\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\subsection{}
+1. Make truth tables for the following formulas:
+
+(a) $\neg [P \land (Q \lor \neg P)]$
+
+(b) $(P \lor Q) \land (\neg P \lor R)$
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ P & Q & $\neg [P \land (Q \lor \neg P)]$ \\ [0.5ex] 
+ \hline\hline
+ F & F & T*FT-FT-TF\\ 
+ \hline
+ F & T & T*FT-TT-TF\\
+ \hline
+ T & F & F*TF-FF-FT\\
+ \hline
+ T & T & F*TT-TT-FT\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+ \begin{tabular}{||c c c c ||} 
+ \hline
+ P & Q & R & $(P \lor Q) \land (\neg P \lor R)$ \\ [0.5ex] 
+ \hline\hline
+ F & F & F & FF-F F* TFT-F\\ 
+ \hline
+ F & F & T & FF-F F* TFT-T\\
+ \hline
+ F & T & F & FT-T T* TFT-F\\
+ \hline
+ F & T & T & FT-T T* TFT-T\\
+ \hline
+ T & F & F & TT-F F* FTF-F\\
+ \hline
+ T & F & T & TT-F T* FTT-T\\
+ \hline
+ T & T & F & TT-T F* FTF-F\\
+ \hline
+ T & T & T & TT-T T* FTT-T\\[1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\subsection{}
+In this exercise we will use the symbol + to mean exclusive or. In
+other words, $P + Q$ means “P or Q, but not both.”
+
+(a) Make a truth table for $P + Q.$
+
+(b) Find a formula using only the connectives $\land, \lor, and  \neg$ that is equivalent to $P + Q$. Justify your answer with a truth table.
+\begin{enumerate}[label=(\alph*)]
+  \item 
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ P & Q & $P + Q$ \\ [0.5ex] 
+ \hline\hline
+ F & F & FF*F\\ 
+ \hline
+ F & T & FT*T\\
+ \hline
+ T & F & TT*F\\
+ \hline
+ T & T & TF*T\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\item
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ P & Q & $P \land Q$ \\ [0.5ex] 
+ \hline\hline
+ F & F & FF*F\\ 
+ \hline
+ F & T & FF*T\\
+ \hline
+ T & F & TF*F\\
+ \hline
+ T & T & TT*T\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\end{enumerate}
+\subsection{}
+Find a formula using only the connectives $\land$ and $\neg$ that is equivalent
+to $P \lor Q$. Justify your answer with a truth table.
+\begin{center}
+ \begin{tabular}{||c c c c ||} 
+ \hline
+ P & Q & $(\neg P \land Q ) \lor P$ & $ P \lor Q $\\ [0.5ex] 
+ \hline\hline
+ F & F &TF F- F F* F & FF*F\\ 
+ \hline
+ F & T &TF T- T T* F & FT*T\\
+ \hline
+ T & F &FT F- F T* T & TT*F\\
+ \hline
+ T & T &FT F- T T* T & TT*T\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\subsection{}
+Some mathematicians use the symbol $\downarrow$ to mean nor. In other words,
+$P \downarrow Q$ means “neither P nor Q.”
+
+(a) Make a truth table for $P \downarrow Q$.
+
+(b) Find a formula using only the connectives$ \land, \lor, and \neg $that is
+equivalent to $P \downarrow Q$.
+
+(c) Find formulas using only the connective $\downarrow$ that are equivalent to $\neg P, P
+\lor Q, and P \land Q$.
+
+\begin{enumerate}[label=(\alph*)]
+  \item 
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ P & Q & $P \downarrow Q$ \\ [0.5ex] 
+ \hline\hline
+ F & F & FT*F\\ 
+ \hline
+ F & T & FF*T\\
+ \hline
+ T & F & TF*F\\
+ \hline
+ T & T & TF*T\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\item
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ P & Q & $\neg P \land \neg Q$ \\ [0.5ex] 
+ \hline\hline
+ F & F & TF T* TF\\ 
+ \hline
+ F & T & TF F* FT\\
+ \hline
+ T & F & FT F* TF\\
+ \hline
+ T & T & FT F* FT\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\item 
+\begin{center}
+ \begin{tabular}{||c c c c c c||} 
+ \hline
+ P & Q & $\neg P \lor Q$ &eq to $\neg(\neg P\downarrow Q )$ & $P \land Q$ & eq to $\neg P \downarrow \neg Q$  \\ [0.5ex] 
+ \hline\hline
+ F & F & TF T* F & T* TF F-F & FF*F & TF F* TF\\ 
+ \hline
+ F & T & TF T* T & T* TF F-T & FF*T & TF F* FT\\
+ \hline
+ T & F & FT F* F & F* FT T-F & TF*F & FT F* TF\\
+ \hline
+ T & T & FT T* T & T* FT F-T & TT*T & FT T* FT\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\end{enumerate}
+\subsection{}
+Some mathematicians write $P | Q$to mean “P and Q are not both
+true.” (This connective is called nand, and is used in the study of
+circuits in computer science.)
+
+(a) Make a truth table for $P | Q$.
+
+(b) Find a formula using only the connectives $\land, \lor, and \neg$ that is
+equivalent to $P | Q$.
+
+(c) Find formulas using only the connective $|$ that are equivalent to $\neg P, P
+\lor Q, and P \land Q$.
+\begin{enumerate}[label=(\alph*)]
+  \item 
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ P & Q & $P \vert Q$ \\ [0.5ex] 
+ \hline\hline
+ F & F & FT*F\\ 
+ \hline
+ F & T & FT*T\\
+ \hline
+ T & F & TT*F\\
+ \hline
+ T & T & TF*T\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\item
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ P & Q & $\neg P \lor \neg Q$ \\ [0.5ex] 
+ \hline\hline
+ F & F & TF T* TF\\ 
+ \hline
+ F & T & TF T* FT\\
+ \hline
+ T & F & FT T* TF\\
+ \hline
+ T & T & FT F* FT\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\item
+\begin{center}
+ \begin{tabular}{||c c c c c c c c||} 
+ \hline
+ P & Q & $\neg P$ &eq to $P \vert P$ & $P \lor Q$ & eq to $\neg P \vert Q$ & $P \land Q$ & eq to $\neg (P \vert Q)$ \\ [0.2ex] 
+ \hline\hline
+ F & F & T & FT*F & FF*F & TF F* F & FF*F & F*FT-F\\ 
+ \hline
+ F & T & T & FT*T & FT*T & TF T* T & FF*T & F*FT-T\\
+ \hline
+ T & F & F & TF*F & TT*F & FT T* F & TF*F & F*TT-F\\
+ \hline
+ T & T & F & TF*T & TT*T & FT T* T & TT*T & T*TF-T\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\end{enumerate}
+\subsection{}
+I skipped exercise 9 in the previous section (this exercises needs the previous one)
+\subsection{}
+Use truth tables to determine which of the following formulas are
+equivalent to each other:
+
+(a) $(P \land Q) \lor (\neg P \land \neg Q)$.
+
+(b) $\neg P \lor Q$.
+
+(c) $(P \lor \neg Q) \land (Q \lor \neg P)$.
+
+(d) $\neg(P \lor Q)$.
+
+(e) $(Q \land P) \lor \neg P$.
+\begin{enumerate}[label=(\alph*)]
+  \item 
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ P & Q & $(P\land Q) \lor (\neg P \land \neg Q) $ \\ [0.5ex] 
+ \hline\hline
+ F & F & F F- F T* TF T- TF\\ 
+ \hline
+ F & T & F F- T F* TF F- FT\\
+ \hline
+ T & F & T F- F F* FT F- TF\\
+ \hline
+ T & T & T T- T T* FT F- FT\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\item
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ P & Q & $\neg P \lor Q$ \\ [0.5ex] 
+ \hline\hline
+ F & F & TFT*F\\ 
+ \hline
+ F & T & TFT*T\\
+ \hline
+ T & F & FTF*F\\
+ \hline
+ T & T & FTT*T\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\item
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ P & Q & $(P\lor \neg Q) \land (Q \lor \neg P) $ \\ [0.5ex] 
+ \hline\hline
+ F & F & F T- TF T* F T- TF\\ 
+ \hline
+ F & T & F F- FT F* T T- TF\\
+ \hline
+ T & F & T T- TF F* F F- FT\\
+ \hline
+ T & T & T T- FT T* T T- FT\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\item
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ P & Q & $\neg (P \lor Q) $\\ [0.5ex] 
+ \hline\hline
+ F & F & T* FF-F\\ 
+ \hline
+ F & T & F* FT-T\\
+ \hline
+ T & F & F* TT-F\\
+ \hline
+ T & T & F* TT-T\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\item
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ P & Q & $(Q \land P) \lor \neg P$\\ [0.5ex] 
+ \hline\hline
+ F & F & F F- F T* TF\\ 
+ \hline
+ F & T & T F- F T* TF\\
+ \hline
+ T & F & F F- T F* FT\\
+ \hline
+ T & T & T T- T T* FT\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+(b) is equivalent to (e), (c) is equivalent to (d), (a) is equivalent to none
+\subsection{}
+Use truth tables to determine which of these statements are
+tautologies, which are contradictions, and which are neither:
+
+(a) $(P \lor Q) \land (\neg P \lor \neg Q)$.
+
+(b) $(P \lor Q) \land (\neg P \land \neg Q)$.
+
+(c) $(P \lor Q) \lor (\neg P \lor \neg Q)$.
+
+(d) $[P \land (Q \lor \neg R)] \lor (\neg P \lor R)$.
+\begin{enumerate}[label=(\alph*)]
+  \item 
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ P & Q & $(P\lor Q) \land (\neg P \lor \neg Q) $ \\ [0.5ex] 
+ \hline\hline
+ F & F & F F- F F* TF T- TF\\ 
+ \hline
+ F & T & F T- T T* TF T- FT\\
+ \hline
+ T & F & T T- F T* FT T- TF\\
+ \hline
+ T & T & T T- T F* FT F- FT\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+  \item 
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ P & Q & $(P\lor Q) \land (\neg P \land \neg Q) $ \\ [0.5ex] 
+ \hline\hline
+ F & F & F F- F F* TF T- TF\\ 
+ \hline
+ F & T & F T- T F* TF F- FT\\
+ \hline
+ T & F & T T- F F* FT F- TF\\
+ \hline
+ T & T & T T- T F* FT F- FT\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+  \item 
+\begin{center}
+ \begin{tabular}{||c c c ||} 
+ \hline
+ P & Q & $(P\lor Q) \lor (\neg P \lor \neg Q) $ \\ [0.5ex] 
+ \hline\hline
+ F & F & F F- F T* TF T- TF\\ 
+ \hline
+ F & T & F T- T T* TF T- FT\\
+ \hline
+ T & F & T T- F T* FT T- TF\\
+ \hline
+ T & T & T T- T T* FT F- FT\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+  \item 
+\begin{center}
+ \begin{tabular}{||c c c c ||} 
+ \hline
+ P & Q & R & $[P\land (Q \lor \neg R)]\lor (\neg P \lor \neg R) $ \\ [0.5ex] 
+ \hline\hline
+ F & F & F & F  F-' F  T- TF  T* TF  T-' TF\\ 
+ \hline
+ F & F & T & F  F-' F  F- FT  T* TF  T-' FT\\
+ \hline
+ F & T & F & F  F-' T  T- TF  T* TF  T-' TF\\
+ \hline
+ F & T & T & F  F-' T  T- FT  T* TF  T-' FT\\
+ \hline
+ T & F & F & T  T-' F  T- TF  T* FT  T-' TF\\
+ \hline
+ T & F & T & T  F-' F  F- FT  F* FT  F-' FT\\
+ \hline
+ T & T & F & T  T-' T  T- TF  T* FT  T-' TF\\
+ \hline
+ T & T & T & T  T-' T  T- FT  T* FT  F-' FT\\[1ex] 
+ \hline
+ \end{tabular}
+ \end{center}
+\end{enumerate}
+
+(a) is neither, (b) is a contradiction, (c) is a tautology and (d) is neither
+\subsection{}
+Use truth tables to check these laws:
+
+(a) The second De Morgan’s law. (The first was checked in the text.)
+
+(b) The distributive laws.
+\begin{enumerate}[label=(\alph*)]
+  \item 
+\begin{center}
+ \begin{tabular}{||c c c c ||} 
+ \hline
+ P & Q & $\neg( P \lor Q)$ & eq to $\neg P \land \neg Q$ \\ [0.5ex] 
+ \hline\hline
+ F & F & T*FF-F & TF T* TF\\ 
+ \hline
+ F & T & F*FT-T & TF F* FT\\
+ \hline
+ T & F & F*TT-F & FT F* TF\\
+ \hline
+ T & T & F*TT-T & FT F* FT\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\item
+\begin{center}
+ \begin{tabular}{||c c c c c||} 
+ \hline
+ P & Q & R & $P \land (Q \lor R)$ & eq to $(P \land Q) \lor (P \land R)$ \\ [0.5ex] 
+ \hline\hline
+ F & F & F & F F* F F-F & F F- F F* F F- F\\ 
+ \hline
+ F & F & T & F F* F T-T & F F- F F* F F- T\\
+ \hline
+ F & T & F & F F* T T-F & F F- T F* F F- F\\
+ \hline
+ F & T & T & F F* T T-T & F F- T F* F F- T\\
+ \hline
+ T & F & F & T F* F F-F & T F- F F* T F- F\\
+ \hline
+ T & F & T & T T* F T-T & T F- F T* T T- T\\
+ \hline
+ T & T & F & T T* T T-F & T T- T T* T F- F\\
+ \hline
+ T & T & T & T T* T T-T & T T- T T* T T- T\\[1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+ \begin{tabular}{||c c c c c||} 
+ \hline
+ P & Q & R & $P \lor (Q \land R)$ & eq to $(P \lor Q) \land (P \lor R)$ \\ [0.5ex] 
+ \hline\hline
+ F & F & F & F F* F F- F & F F- F F* F F- F\\ 
+ \hline
+ F & F & T & F F* F F- T & F F- F F* F T- T\\
+ \hline
+ F & T & F & F F* T F- F & F T- T F* F F- F\\
+ \hline
+ F & T & T & F T* T T- T & F T- T T* F T- T\\
+ \hline
+ T & F & F & T T* F F- F & T T- F T* T T- F\\
+ \hline
+ T & F & T & T T* F F- T & T T- F T* T T- T\\
+ \hline
+ T & T & F & T T* T F- F & T T- T T* T T- F\\
+ \hline
+ T & T & T & T T* T T- T & T T- T T* T T- T\\[1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\end{enumerate}
+\subsection{}
+Use the laws stated in the text to find simpler formulas equivalent to
+these formulas. 
+
+(a) $\neg(\neg P \land \neg Q)$.
+
+(b) $(P \land Q) \lor (P \land \neg Q)$.
+
+(c) $\neg (P \land \neg Q) \lor (\neg P \land Q)$.
+
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    $\neg (\neg P \land \neg Q)$ is equivalent to $P \lor Q$ De Morgan's law, double negation law.
+    \item
+    $(P \land Q) \lor (P \land \neg Q)$ is equivalent to $P \land ( Q \lor \neg Q)$ Distributive laws
+    
+    $P \land ( Q \lor \neg Q)$ is a tautology
+    P 
+    \item 
+    $\neg (P \land \neg Q) \lor (\neg P \land Q)$ is equivalent to $(\neg P \lor Q) \lor (\neg P \land Q)$ De Morgan's law.
+    
+    $(\neg P \lor Q) \lor (\neg P \land Q)$ is equivalent to $(\neg P \lor Q) \lor (Q \land \neg P)$ Commutative law
+    
+    $(\neg P \lor Q) \lor (Q \land \neg P)$ is equivalent to $\neg P \lor [Q \lor (Q \land \neg P)]$ Associative law
+    
+    $\neg P \lor [Q \lor (Q \land \neg P)]$ is equivalent to $\neg P \lor (Q \lor Q) \land (Q \lor \neg P)$ Distributive law
+    
+    $\neg P \lor (Q \lor Q) \land (Q \lor \neg P)$ is equivalent to $\neg P \lor Q \land (Q \lor  \neg P)$ Idempotent law
+    
+    $\neg P \lor Q \land (Q \lor  \neg P)$ is equivalent to $(\neg P \lor Q) \land (\neg P \lor Q)$ Commutative law
+    
+    $(\neg P \lor Q) \land (\neg P \lor Q)$ is equivalent to $\neg P \lor Q$ Idempotent law
+\end{enumerate}
+\subsection{}
+Use the laws stated in the text to find simpler formulas equivalent to
+these formulas.
+
+(a) $\neg(\neg P \lor Q) \lor (P \land \neg R)$.
+
+(b) $\neg(\neg P \land Q) \lor (P \land \neg R)$.
+
+(c) $(P \land R) \lor [\neg R \land (P \lor Q)]$.
+
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    $\neg(\neg P \lor Q) \lor (P \land \neg R)$ is equivalent to $(P \land \neg Q) \lor (P \land \neg R)$ De Morgan's law
+    
+    $(P \land \neg Q) \lor (P \land \neg R)$ is equivalent to $P \land (\neg Q \lor \neg R )$ Distributive law
+    
+    $P \land (\neg Q \lor \neg R )$ 
+    \item
+    $\neg(\neg P \land Q) \lor (P \land \neg R)$ is equivalent to $(P \lor \neg Q) \lor ( P \land \neg R)$ De Morgan's law
+    
+    $(P \lor \neg Q) \lor ( P \land \neg R)$ is equivalent to $(\neg Q \lor P) \lor ( P \land \neg R)$ Commutative law
+    
+    $(\neg Q \lor P) \lor ( P \land \neg R)$ is equivalent to $\neg Q \lor[P \lor (P \land \neg R)]$ Associative law
+    
+    $\neg Q \lor[P \lor (P \land \neg R)]$ is equivalent to $\neg Q \lor [(P \lor P) \land (P \lor \neg R)]$ Distributive law
+    
+   $\neg Q \lor [(P \lor P) \land (P \lor \neg R)]$ is equivalent to $\neg Q \lor [P \land (P \lor \neg R)]$ Idempotent law
+   
+   $\neg Q \lor [P \land (P \lor \neg R)]$ is equivalent to $\neg Q \lor P$ Absorption law (applied to the[])
+    \item
+    $(P \land R) \lor [\neg R \land (P \lor Q)]$ is equivalent to $(P \land R ) \lor [ (\neg R  \land P) \lor (\neg R\land Q )]$ Distributive law 
+ 
+    $(P \land R) \lor [ (\neg R  \land P) \lor (\neg R\land Q )]$ is equivalent to $[(P \land R) \lor ( P \land  \neg R)] \lor  ( \neg R \land Q)$ Associative law, Commutative law
+    
+    $[(P \land R) \lor ( P \land  \neg R)] \lor  ( \neg R \land Q)$ is equivalent to $[P \land (R \lor \neg R)] \lor (\neg R \land Q)$ Distributive law
+    
+    $[P \land (R \lor \neg R)] \lor (\neg R \land Q)$ is equivalent to  $ P\lor (\neg R \land Q)$ since $[P \land (R \lor \neg R)]$ is a tautology 
+    
+    $ P\lor (\neg R \land Q)$
+\end{enumerate}
+\subsection{}
+Use the first De Morgan’s law and the double negation law to derive
+the second De Morgan’s law.
+\subsection{}
+Note that the associative laws say only that parentheses are
+unnecessary when combining three statements with $\land$ or $\lor$. In fact,
+these laws can be used to justify leaving parentheses out when more
+than three statements are combined. Use associative laws to show that
+$[P \land (Q \land R)] \land S$ is equivalent to $(P \land Q) \land (R \land S)$.
+\subsection{}
+How many lines will there be in the truth table for a statement
+containing n letters?
+\subsection{}
+Find a formula involving the connectives $\land, \lor,$ and $\neg$ that has the
+following truth table:
+\begin{center}
+ \begin{tabular}{||c c c c||} 
+ \hline
+ P & Q & $P \lor \neg Q$ & The result needed is:\\ [0.5ex] 
+ \hline\hline
+ F & F & FT*TF &  T\\ 
+ \hline
+ F & T & FF*FT &  F\\
+ \hline
+ T & F & TT*TF &  T\\
+ \hline
+ T & T & TT*FT &  T\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\subsection{}
+Find a formula involving the connectives $\land$, $\lor$, and $\neg$ that has the
+following truth table:
+\begin{center}
+ \begin{tabular}{||c c c c||} 
+ \hline
+ P & Q & $P + Q$ & The result needed is:\\ [0.5ex] 
+ \hline\hline
+ F & F & FF*F &  F\\ 
+ \hline
+ F & T & FT*T &  T\\
+ \hline
+ T & F & TT*F &  T\\
+ \hline
+ T & T & TF*T &  F\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\subsection{}
+Suppose the conclusion of an argument is a tautology. What can you
+conclude about the validity of the argument? What if the conclusion is
+a contradiction? What if one of the premises is either a tautology or a
+contradiction?
+
+If a conclusion is a tautology, the argument is bound to be valid if there is at least one case were all the premises are true
+
+If a conclusion is a contradiction and the premises are all contradictions, then the argument is valid
+
+If a premise is either a tautology or a contradiction this premise can be overlooked, erased, it doesn't matter at all.
+\section{Exercises 1.3}
+\subsection{4}
+Write definitions using elementhood tests for the following sets:
+
+(a) $\{1, 4, 9, 16, 25, 36, 49, \cdots \}$.
+
+(b) $\{1, 2, 4, 8, 16, 32, 64,\cdots \}$.
+
+(c) $\{10, 11, 12, 13, 14, 15, 16, 17, 18, 19 \}$.
+
+\begin{enumerate}[label=(\alph*)]
+    \item
+    $\{x^2  \vert x \in \mathbf{N} \land x \neq 0\}$
+    \item
+    $\{2^x  \vert x \in \mathbf {N}\}$
+    \item
+    $\{ x \in \mathbf{N} \vert 10\leq x \leq 19\}$
+\end{enumerate}
+\subsection{5}
+Simplify the following statements. Which variables are free and
+which are bound? If the statement has no free variables, say whether
+it is true or false.
+
+(a) $-3 \in \{x \in R \vert 13 - 2x > 1\}$.
+
+(b) $4 \in \{x \in R^-\vert 13 - 2x > 1\}$.
+
+(c) $5 \notin \{x \in R \vert 13 - 2x > c\}$.
+
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    $ x \in R \land 13-2x > 1$  
+    
+    x is bound, the statement is True since $ -3 \in R \land 19 > 1$ is True
+    \item
+    $ x \in R^-\land 13-2x> 1$
+    
+    x is bound, the statement is False since $ 4 \in R^-\land 5> 1$ is False
+    \item
+    $ \neg (x \in R \land 13-2x > c)$ or $( x \notin \mathbf{R} )\lor (13 - 2x < c)$
+    
+    I don't now if De Morgan's law can be applied like this to $>$ and $\in$ (?)
+    
+    x is bound, c is a free variable, it can't be proven either true or false since $( 5 \notin \mathbf{R} )\lor (3 < c)$
+\end{enumerate}
+\subsection{7}
+List the elements of the following sets:
+
+(a) $\{x \in \mathbf{R} \vert 2x^2 + x - 1 = 0\}$.
+
+(b) $\{x \in \mathbf{R^+}\vert 2x^2 + x - 1 = 0\}$.
+
+(c) $\{x \in \mathbf{Z} \vert 2x^2 + x - 1 = 0\}$.
+
+(d) $\{x \in \mathbf{N} \vert 2x^2 + x - 1 = 0\}$.
+
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    $\{ \frac{1}{2}, -1\}$
+    \item
+    $\{ \frac{1}{2}\}$
+    \item
+    $\{-1\}$
+    \item
+    $\{\}$
+\end{enumerate}
+\subsection{9}
+What are the truth sets of the following statements? List a few
+elements of the truth set if you can.
+
+(a) x is a real number and $x^2- 4 x + 3 = 0$.
+
+(b) x is a real number and $x^2- 2 x + 3 = 0$.
+
+(c) x is a real number and $5 \in \{y \in R \vert x^2 + y^2< 50\}$.
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    $\{-1,-3\}$
+    \item
+    $\emptyset$ 
+    \item
+    $\{x \in \mathbf{R} \vert {x^2}<25\}$= $(-5,5)$ 
+\end{enumerate}
+\section{Exercises 1.4}
+\subsection{1}
+Let $A = \{1, 3, 12, 35\}, B = \{3, 7, 12, 20\}$, and $C = \{x \vert x \ is \ a \ prime \ number\}$. List the elements of the following sets. Are any of the sets below disjoint from any of the others? Are any of the sets below
+subsets of any others?
+
+(a) $A \cap B$.
+
+(b) $(A \cup B) \setminus C$.
+
+(c) $A \cup (B \setminus C)$.
+
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    $A \cap B = \{ 3, 12 \}$ $\ (a)  \subset (c) $
+    \item
+    $(A \cup B) \setminus C = \{ 1,12,20,35\}$ $\ (b)  \subset (c) $
+    \item
+     $A \cup (B \setminus C) = \{ 1,3,7,12,20,35\}$
+     
+     All sets are connected in one way or another, there are no disjoints.
+\end{enumerate}
+\subsection{4}
+Use Venn diagrams to verify the following identities:
+
+(a) $A\setminus (A \cap B) = A \setminus B$.
+
+(b) $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
+
+Both diagrams are in the discord
+\subsection{5}
+Verify the identities in exercise 4 by writing out (using logical
+symbols) what it means for an object x to be an element of each set
+and then using logical equivalences.
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    $A\setminus (A \cap B)$ = $A \setminus B$
+    
+    $A\setminus (A \cap B)$ is equivalent to $x \in A \land \neg (x \in A \land x \in B)$
+    
+    $x \in A \land \neg (x \in A \land x \in B)$ is equivalent to $x \in A \land  (x \notin A \lor x \notin B)$ De Morgan's law
+    
+    $x \in A \land  (x \notin A \lor x \notin B)$ is equivalent to $(x \in A \land  x \notin A) \lor (x \in A \land x \notin B)$ Distributive law
+    
+     $(x \in A \land  x \notin A) \lor (x \in A \land x \notin B)$ is equivalent to $(x \in A \land x \notin B)$ Contradiction law
+     
+     $(x \in A \land x \notin B)$ is equivalent to $A \setminus B$
+     
+     Therefore $A\setminus (A \cap B) = A \setminus B$
+    \item
+    $A \cup (B \cap C)$ is equivalent to $x \in A \lor (x \in B \land x \in C)$
+    
+    $x \in A \lor (x \in B \land x \in C)$ is equivalent to $(x \in A \lor x \in B ) \land (x \in A \lor x \in C)$ Distributive law
+    
+    $(x \in A \lor x \in B ) \land (x \in A \lor x \in C)$ is equivalent to $(A \cup B) \cap (A \cup C)$ 
+    
+    Therefore $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
+\end{enumerate}
+\subsection{10}
+It was shown in this section that for any sets A and B, $(A \cup B) \setminus B \subset A$.
+
+(a) Give an example of two sets A and B for which $(A \cup B) \setminus B = A$.
+
+(b) Show that for all sets A and B, $(A \cup B) \setminus B = A \setminus B$.
+
+\begin{enumerate}[label=(\alph*)]
+    \item 
+   A and B are disjoint for this to be true
+   
+   $A=\{1,2,3 \}$
+   $B=\{4,5,6 \}$
+   
+    \item
+    $(A \cup B) \setminus B = A \setminus B$ is equivalent to $(x \in A \lor x \in B) \land \neg (x \in B)$ 
+    
+    $(x \in A \lor x \in B) \land \neg (x \in B)$ is equivalent to $(x \in A \lor x \in B) \land  (x \notin B)$ De Morgan's law
+    
+    $(x \in A \lor x \in B) \land  (x \notin B)$ is equivalent to $(x \notin B) \land (x \in B \lor x \in A)$ Commutative law (just for me not to confuse)
+    
+    $(x \notin B) \land (x \in B \lor x \in A)$ is equivalent to $(x\notin B \land x \in B ) \lor (x \notin B \land x \in A)$ Distributive law
+    
+    $(x\notin B \land x \in B ) \lor (x \notin B \land x \in A)$ is equivalent to $x\notin B \land x \in A$ Contradiction law
+    
+    $x\notin B \land x \in A$ is equivalent to  $x\in A \land x \notin B$ Commutative law
+    
+    $x\in A \land x \notin B$ is equivalent to $A \setminus B$
+    
+    Therefore $(A \cup B) \setminus B = A \setminus B$
+\end{enumerate}
+\subsection{13}
+(a) Make Venn diagrams for the sets $(A \cup B) \setminus C  \ and  \ A \cup (B \setminus C)$.What can you conclude about whether one of these sets is
+necessarily a subset of the other?
+(b) Give an example of sets A, B, and C for which $(A \cup B) \setminus C \neq A \cup (B \setminus C)$.
+
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    Images on the discord.
+    Conclusion, indeed $(A \cup B) \setminus C  \subset  \ A \cup (B \setminus C)$
+    \item
+    $A= \{1,2,3,6 \}$
+    $B= \{1,3,4 \}$
+    $C= \{2,3,5 \}$
+    
+    $(A \cup B) \setminus C$=$\{ 1,4,6\}$ 
+    
+    $A \cup (B \setminus C)$=$\{1,2,3,4,6 \}$
+\end{enumerate}
+\section{Exercises 1.5}
+\subsection{1}
+Analyze the logical forms of the following statements:
+
+(a) If this gas either has an unpleasant smell or is not explosive, then it
+isn’t hydrogen.
+
+(b) Having both a fever and a headache is a sufficient condition for
+George to go to the doctor.
+
+(c) Both having a fever and having a headache are sufficient conditions
+for George to go to the doctor.
+
+(d) If $x \neq 2$, then a necessary condition for x to be prime is that x be odd.
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    P=Pleasant smell, E= Explosive, H=Hydrogen
+    
+    $(\neg P \lor \neg E)\rightarrow \neg H$ 
+    is equivalent to $\neg (P \land E) \rightarrow \neg H$ is equivalent to $H \rightarrow (P \land E)$
+    \item
+    F=Fever, H=Headache, G=Go to the doctor
+    
+    $(F\land H)\rightarrow G$
+    \item
+    F= Fever, H=Headache, G=Go to the doctor
+    
+    $(F\rightarrow G) \land (H\rightarrow G)$
+    \item
+    P(x)= x is prime, O(x)=odd
+    
+    $x \neq 2 \rightarrow( \neg O(x) \rightarrow \neg P(x))$ is equivalent to $x \neq 2 \rightarrow( P(x) \rightarrow O(x))$
+\end{enumerate}
+\subsection{6}
+(a) Show that $P \leftrightarrow Q$ is equivalent to $(P \land Q) \lor (\neg P \land \neg Q)$.
+
+(b) Show that $(P \rightarrow Q) \lor (P \rightarrow R)$ is equivalent to $P \rightarrow (Q \lor R)$.
+\begin{enumerate} [label=(\alph*)]
+    \item 
+    $P \leftrightarrow Q$ is equivalent to $(P \rightarrow Q) \land (Q \rightarrow P)$ Biconditional statement
+    
+    $(P \rightarrow Q) \land (Q \rightarrow P)$ is equivalent to $(\neg P \lor Q) \land (\neg Q \lor P)$ Conditional law
+    
+    $(\neg P \lor Q) \land (\neg Q \lor P)$ is equivalent to $[(\neg P \lor  Q ) \land  \neg Q]\lor [(\neg P \lor Q )\land P]$ Distributive law
+    
+    $[(\neg P \lor  Q ) \land  \neg Q]\lor [(\neg P \lor Q )\land P]$ is equivalent to $[(\neg Q \land Q)\lor (\neg Q \land \neg P)]\lor[(P \land Q)\lor(P \land \neg P)]$ Distributive law
+    
+    $[(\neg Q \land Q)\lor (\neg Q \land \neg P)]\lor[(P \land Q)\lor(P \land \neg P)]$ is equivalent to $(\neg Q \land \neg P) \lor (P \land Q)$ Contradiction law
+    
+    $(\neg Q \land \neg P) \lor (P \land Q)$ is equivalent to $(P \land Q) \lor (\neg P \land \neg Q)$ Commutative law
+    
+    Therefore $P \leftrightarrow Q$ is equivalent to $(P \land Q) \lor (\neg P \land \neg Q)$
+    \item
+    $(P \rightarrow Q) \lor (P \rightarrow R)$ is equivalent to $(\neg P \lor Q) \lor (\neg P \lor R)$ Conditional law
+    
+    $(\neg P \lor Q) \lor (\neg P \lor R)$ is equivalent to $(\neg P \lor \neg P ) \lor (Q \lor R)$ Commutative law
+    
+    $(\neg P \lor \neg P ) \lor (Q \lor R)$ is equivalent to $\neg P \lor (Q \lor R)$ Idempotent law
+    
+    $\neg P \lor (Q \lor R)$ is equivalent to $P \rightarrow (Q \lor R)$ Conditional law
+    
+    Therefore $(P \rightarrow Q) \lor (P \rightarrow R)$ is equivalent to $P \rightarrow (Q \lor R)$
+\end{enumerate}
+\subsection{7}
+(a) Show that $(P \rightarrow R) \land (Q \rightarrow R)$ is equivalent to $(P \lor Q) \rightarrow R$.
+
+(b) Formulate and verify a similar equivalence involving $(P \rightarrow R) \lor (Q
+\rightarrow R)$.
+\begin{enumerate} [label=(\alph*)]
+    \item 
+    $(P \rightarrow R) \land (Q \rightarrow R)$ is equivalent to $(\neg P \lor R ) \land ( \neg Q \lor R)$ Conditional law
+    
+    $(\neg P \lor R ) \land ( \neg Q \lor R)$ is equivalent to $R \lor ( \neg P \land \neg Q)$ Distributive law
+    
+    $R \lor ( \neg P \land \neg Q)$ is equivalent to $R \lor \neg ( P \lor Q)$ De Morgan's law
+    
+    $R \lor \neg ( P \lor Q)$ is equivalent to $(P \lor Q) \rightarrow R$ Conditional law
+    \item
+    $(P \rightarrow R) \lor (Q\rightarrow R)$ is equivalent to $(\neg P \lor R)\lor(\neg Q \lor R)$ Conditional law
+    
+    $(\neg P \lor R)\lor(\neg Q \lor R)$ is equivalent to $(\neg P \lor \neg Q)\lor(R\lor R)$ Commutative and associative laws
+    
+    $(\neg P \lor \neg Q)\lor(R\lor R)$ is equivalent to $(\neg P \lor \neg Q)\lor R$ Idempotent law
+    
+    $(\neg P \lor \neg Q)\lor R$ is equivalent to $\neg (P \land Q) \lor R$ De Morgan's law
+    
+    $\neg (P \land Q) \lor R$ is equivalent to $(P\land Q) \rightarrow R$ Conditional law
+    
+    Therefore $(P\land Q) \rightarrow R$ is equivalent to $(P \rightarrow R) \lor (Q\rightarrow R)$
+\end{enumerate}
+\subsection{8}
+(a) Show that $(P \rightarrow Q) \land (Q \rightarrow R)$ is equivalent to $(P \rightarrow R) \land [(P \leftrightarrow
+Q)\lor (R \leftrightarrow Q)]$.
+
+(b) Show that $(P \rightarrow Q) \lor (Q \rightarrow R)$ is a tautology.
+\begin{enumerate} [label=(\alph*)]
+    \item 
+    $(P \rightarrow R) \land [(P \leftrightarrow Q)\lor (R \leftrightarrow Q)]$
+    
+    is equivalent to
+    
+    $(P \rightarrow R) \land \{[(P \rightarrow Q) \land (Q \rightarrow P)]\lor [(R \rightarrow Q) \land (Q \rightarrow R)]\}$ Bi conditional statement
+    
+    which is equivalent to
+    
+    
+    $(\neg P \lor R) \land \{[(\neg P \lor Q) \land (\neg Q \lor P)]\lor [(\neg R \lor Q) \land (\neg Q \lor R)]\}$ Conditional law
+    
+    which is equivalent to 
+    
+    $(\neg P \lor R)\land \{[(\neg P \lor  Q ) \land  \neg Q]\lor [(\neg P \lor Q )\land P] \lor [(\neg R \lor  Q ) \land  \neg Q]\lor [(\neg R \lor Q )\land R]\}$ Distributive law
+    
+    which is equivalent to 
+    
+    $(\neg P \lor R)\land \{[(\neg Q \land Q)\lor (\neg Q \land \neg P)]\lor[(P \land Q)\lor(P \land \neg P)] \lor [(\neg Q \land Q)\lor (\neg Q \land \neg R)]\lor[(R \land Q)\lor(R \land \neg R)]\}$ Distributive law
+    
+    which is equivalent to 
+    
+    $(\neg P \lor R)\land \{[(\neg Q \land \neg P)\lor(P \land Q)]\lor[(\neg Q  \land \neg R)\lor(R \land Q)] \}$ Contradiction law
+    
+    which is equivalent to 
+    
+    $(\neg P \lor R)\land \{[(\neg Q \land \neg P)\lor(\neg Q \land \neg R)]\lor[(P  \land Q)\lor(R \land Q)] \}$  Commutative and Associative law
+    
+    which is equivalent to
+    
+    $(\neg P \lor R)\land \{[\neg Q \land (\neg P \lor \neg R)]\lor[Q \land (P \lor R)] \}$ Distributive law
+    
+    which is equivalent to
+    
+    $\{\neg Q \land [(\neg P \lor R) \land (\neg P \lor \neg R)] \} \lor\{Q \land [(\neg P \lor R) \land (P \lor R)] \}$ Distributive law
+    
+    which is equivalent to
+    
+    $\{\neg Q \land [(\neg P  \lor (R\land \neg R)] \} \lor\{Q \land [ R \lor (P \land \neg P)] \}$ Distributive law
+    
+    which is equivalent to
+    
+    $(\neg Q \land \neg P)\lor( Q \land R)$ Contradiction law
+    
+    which is equivalent to
+    
+    $[(\neg Q \land \neg P)\lor Q]\land[(\neg Q \land \neg P)\lor R]$ Distributive law
+    
+    which is equivalent to
+    
+    $[(Q \lor \neg P)\land(Q \lor \neg Q)]\land[(\neg Q \land \neg P)\lor R]$ Distributive law
+    
+    which is equivalent to
+    
+    $(Q \lor  \neg P) \land (\neg Q \land \neg P) \lor R$ Contradiction law
+    
+    which is equivalent to
+    
+    $Q \lor (\neg P \land \neg P) \land \neg Q \lor R$ Commutative law
+    
+    which is equivalent to
+    
+    $(Q \lor \neg P ) \land (\neg Q \lor R)$ Idempotent law
+    
+    which is equivalent to
+    
+    $(P \rightarrow Q) \land (Q \rightarrow R)$ Conditional law
+    
+    Therefore $(P \rightarrow Q) \land (Q \rightarrow R)$ is equivalent to $(P \rightarrow R)\land [(P\leftrightarrow Q)\lor (R \leftrightarrow Q)]$
+    \item
+    $(P \rightarrow Q) \lor (Q \rightarrow R)$ is equivalent to $(\neg P \lor Q) \lor (\neg Q \lor R)$
+    
+    $(\neg P \lor Q) \lor (\neg Q \lor R)$ is equivalent to $(\neg P \lor R) \lor( Q \lor \neg Q)$ Commutative and Associative laws
+    
+    $( Q \lor \neg Q)$ is a tautology
+    
+    Taking into account the tautology law:$P \lor (tautology)= tautology$ 
+    
+    We can conclude that$(\neg P \lor R) \lor( Q \lor \neg Q)$ is a tautology and therefore $(P \rightarrow Q) \lor (Q \rightarrow R)$ is also a tautology
+\end{enumerate}
+\subsection{9}
+Find a formula involving only the connectives $\neg$ and $\rightarrow$ that is
+equivalent to $P \land Q$.
+
+Taking into account $P \rightarrow Q = \neg P \lor Q$
+
+$\neg P \rightarrow Q$ is equivalent to $\neg \neg P \lor Q$ Conditional law
+
+$\neg \neg P \lor Q$ is equivalent to $P \lor Q$ De Morgan's law
+
+Now we go backwards, we just need to put $\neg$ symbols to transform $\lor$ to $\land$
+
+$\neg (P \rightarrow \neg Q)$ is equivalent to $\neg (\neg P \lor \neg Q)$ Conditional law
+
+ $\neg (\neg P \lor \neg Q)$ is equivalent to $P \land Q$ De Morgan's law
+ 
+ 
+ Therefore $\neg (P \rightarrow \neg Q)$ is equivalent to $P \land Q$
+\subsection{11}
+(a) Show that $(P \lor Q) \leftrightarrow Q$ is equivalent to $P \rightarrow Q$.
+
+(b) Show that $(P \land Q) \leftrightarrow Q$ is equivalent to $Q \rightarrow P$.
+\begin{enumerate} [label=(\alph*)]
+    \item 
+    $(P \lor Q) \leftrightarrow Q$ is equivalent to $[(P \lor Q)\rightarrow Q]\land [Q \rightarrow (P \lor Q)]$ Bi conditional statement
+    
+    $[(P \lor Q)\rightarrow Q]\land [Q \rightarrow (P \lor Q)]$ is equivalent to $[\neg(P \lor Q)\lor Q]\land [\neg Q \lor(P \lor Q)]$ Conditional law
+    
+    $[\neg(P \lor Q)\lor Q]\land [\neg Q \lor(P \lor Q)]$ is equivalent to $[(\neg P \land \neg Q)\lor Q]\land [P \lor(\neg Q \lor Q)]$ De Morgan's and Commutative laws
+    
+    $[(\neg P \land \neg Q)\lor Q]\land [P \lor(\neg Q \lor Q)]$ is equivalent to $[(\neg P \land \neg Q)\lor Q]\land [tautology]$ Tautology law
+    
+    $[(\neg P \land \neg Q)\lor Q]\land [tautology]$ is equivalent to $[(\neg P \land \neg Q)\lor Q]$ Tautology law 
+    
+    $[(\neg P \land \neg Q)\lor Q]$ is equivalent to $[(Q \lor \neg Q)\land (Q \lor \neg P)]$ Distributive law
+    
+    $[(Q \lor \neg Q)\land (Q \lor \neg P)]$ is equivalent to $(\neg P \lor Q)$ Tautology law
+    
+    $(\neg P \lor Q)$ is equivalent to $P \rightarrow Q$
+     
+    Therefore $(P \lor Q) \leftrightarrow Q$ is equivalent to $P \rightarrow Q$
+    \item
+    $(P \land Q) \leftrightarrow Q$ is equivalent to $[(P \land Q)\rightarrow Q]\land[Q \rightarrow (P \land Q)]$ Bi conditional statement
+    
+    $[(P \land Q)\rightarrow Q]\land[Q \rightarrow (P \land Q)]$ is equivalent to $[\neg (P \land Q)\lor Q]\land[\neg Q \lor (P \land Q)]$ Conditional law
+    
+    $[\neg (P \land Q)\lor Q]\land[\neg Q \lor (P \land Q)]$ is equivalent to $[(\neg P \lor \neg Q)\lor Q]\land[\neg Q \lor (P \land Q)]$ De Morgan's law
+    
+    $[(\neg P \lor \neg Q)\lor Q]\land[\neg Q \lor (P \land Q)]$ is equivalent to $[(\neg Q \lor Q) \lor \neg P]\land[\neg Q \lor (P \land Q)]$ Commutative law 
+    
+    $[(\neg Q \lor Q) \lor \neg P]\land[\neg Q \lor (P \land Q)]$ is equivalent to $[(tautology) \lor \neg P]\land[\neg Q \lor (P \land Q)]$ Tautology law
+    
+    $[(tautology) \lor \neg P]\land[\neg Q \lor (P \land Q)]$ is equivalent to $[\neg Q \lor (P \land Q)]$ Tautology law
+    
+    $[\neg Q \lor (P \land Q)]$ is equivalent to $(\neg Q \lor P)\land(\neg Q\lor Q)$ Distributive law
+    
+    $(\neg Q \lor P)\land(\neg Q\lor Q)$ is equivalent to $(\neg Q \lor P)$ Tautology law
+    
+    $(\neg Q \lor P)$ is equivalent to $P \rightarrow P$
+    
+    Therefore $(P \land Q) \leftrightarrow Q$ is equivalent to $Q \rightarrow P$
+\end{enumerate}
+\section{Exercises 2.1}
+THERE ARE SOME PARTS HERE THAT ARE INCORRECT, I REDID THESE EXERCISES FURTHER DOWN BELOW.
+\subsection{3}
+Analyze the logical forms of the following statements. The universe
+of discourse is $\mathbf{R}$. What are the free variables in each statement?
+
+(a) Every number that is larger than x is larger than y.
+
+(b) For every number a, the equation $ax^2 + 4x - 2 = 0$ has at least one
+solution iff $a \geq -2$.
+
+(c) All solutions of the inequality $x^3- 3x < 3$ are smaller than 10.
+ 
+(d) If there is a number x such that $x^2 + 5x = w$ and there is a number y
+such that $4 - y^2= w$, then w is strictly between -10 and 10.
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    $\forall n[(n > x) \rightarrow (n > y)]$ 
+    \item
+    $S(x)= \#$ of solutions
+    
+    $\forall a [a \geq -2 \leftrightarrow \exists x (ax^2 + 4x -2 =0)]$
+    \item
+    $\forall x[( x^3-3x <3)\rightarrow (x<10)]$
+    
+    \item
+    $[\exists x(x^2 + 5x = w) \land \exists y(4 - y^2= w)]\rightarrow -10< w <10$
+\end{enumerate}
+\subsection{5}
+Translate the following statements into idiomatic mathematical
+English.
+
+(a) $\forall x[(P(x) \land \neg(x= 2)) \rightarrow O(x)]$, where P(x) means “x is a prime
+number” and O(x) means “x is odd.”
+
+(b) $\exists x[P(x) \land \forall y(P(y) \rightarrow y \leq x)]$, where P(x) means “x is a perfect
+number.”
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    For every number x, if x is a prime number and x is not 2 then x is a prime number.
+    
+    All prime numbers except 2 are odd.
+    \item
+    For every number y, if y is a perfect number then y is less or equal than x.
+    
+    There exists a number x, so that x is a perfect number and is greater or equal than every other perfect number y.
+    
+    X is the greatest perfect number.
+\end{enumerate}
+\subsection{7}
+Are these statements true or false? The universe of discourse is the set
+of all people, and P(x, y) means “x is a parent of y.”
+
+(a) $\exists x \forall yP(x, y)$.
+
+(b) $\forall x \exists yP(x, y)$.
+
+(c) $\neg \exists x \exists yP(x, y)$.
+
+(d) $\exists x\neg \exists yP(x, y)$.
+
+(e) $\exists x\exists y \neg P(x, y)$.
+\begin{enumerate}[label=(\alph*)]
+    \item
+    False There is just one parent for everyone.
+    \item
+    False Everyone (not only parents) have a child
+    \item
+    False For a child there is no parent. Everyone has a parent.
+    \item
+    True There exists someone without a child.
+    \item
+    True 2 persons exists, but they are not related as parent and child. You are not related like that to everyone.
+\end{enumerate}
+\subsection{8}
+Are these statements true or false? The universe of discourse is $\mathbf{N}$.
+
+(a) $\forall x \exists y(2x - y = 0).$
+
+(b) $\exists y \forall x(2x - y = 0).$
+
+(c) $\forall x \exists y(x - 2y = 0).$
+
+(d) $\forall x(x <10 \rightarrow \forall y(y < x \rightarrow y < 9)).$
+
+(e) $\exists y\exists z(y + z = 100).$
+
+(f) $\forall x\exists y(y > x \land \exists z(y + z = 100)).$
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    True (For every x there exist a solution y) For every number x there is a y that is 2 times larger. It is true since there are infinitely many numbers.
+    \item
+    False (For all x there is just one solution) There is a number y that solves for all x this:$\exists y \forall x(2x - y = 0).$, that's false.
+    \item
+    False For every number x, there is a y that is it's half. Not true for natural number, since any odd number makes this statement false.
+    \item
+    True For any number x, if x $<$ 10 then for any number y, if y is less than x then y is less than 9. The $<$ and the conditional statement, make this possible.
+    \item
+    True There exists a number z so that added with another existing number y they result in 100.It is true for this existing universe 
+    \item
+    True For any number x, there exist a y that is bigger and a z that adds up to 100. This is true since the y and the z exists.
+\end{enumerate}
+\subsection{9}
+Same as exercise 8 but with $\mathbf{R}$ as the universe of discourse
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    True For every number x there is a y that is 2 times larger. It is true since there are infinitely many numbers.
+    \item
+    False There is a number y that solves for all x this:$\exists y \forall x(2x - y = 0).$, that's false.
+    \item
+    True For every number x, there is a y that is it's half. It is true when using a real numbers universe. Since you can have rational numbers and solve for the odd numbers.
+    \item
+    True For any number x, if $x<10$ then for any number y, if y is less than x then y is less than 9.
+    \item
+    True There exists a number z so that added with another existing number y they result in 100.It is true for this existing universe 
+    \item
+    True  For any number x, there exist a y that is bigger and a z that adds up to 100.
+\end{enumerate}
+\subsection{10}
+Same as exercise 8 but with $\mathbf{Z}$ as the universe of discourse
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    True For every number x there is a y that is 2 times larger. It is true since there are infinitely many numbers
+    \item
+    False There is a number y that solves for all x this:$\exists y \forall x(2x - y = 0).$, that's false. 
+    \item
+    False It is false when using a real numbers universe. Since you can't have rational numbers and solve for the odd numbers.Example 7. you can't answer 3.5.
+    \item
+    True For any number x, if $x<10$ then for any number y, if y is less than x then y is less than 9.
+    \item
+    True There exists a number z so that added with another existing number y they result in 100.It is true for this existing universe
+    \item
+    True For any number x, there exist a y that is bigger and a z that adds up to 100.
+\end{enumerate}
+\section{Exercises 2.2}
+\subsection{1}
+Negate these statements and then reexpress the results as equivalent
+positive statements. (See Example 2.2.1.)
+
+(a) Everyone who is majoring in math has a friend who needs help with
+his or her homework.
+
+(b) Everyone has a roommate who dislikes everyone.
+
+(c) $A \cup B \subset C \setminus D$.
+
+(d) $\exists x\forall y[y > x \rightarrow \exists z(z^2+ 5z = y)]$.
+
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    M(a)= a is a math major, F(a,b)= a is a friend of b, H(a) = a needs help in his/her homework
+    
+    $\forall x (M(x)\rightarrow \exists y(F(y,x) \land H(y)))$
+    
+    $\neg \forall x (M(x)\rightarrow \exists y(F(y,x) \land H(y)))$
+    
+    $\exists x \neg (M(x)\rightarrow \exists y(F(y,x) \land H(y)))$
+    
+    $\exists x \neg (\neg M(x)\lor \exists y(F(y,x) \land H(y)))$
+    
+    $\exists x ( M(x)\land \neg \exists y(F(y,x) \land H(y)))$
+    
+    $\exists x ( M(x)\land  \forall y(\neg F(y,x) \lor \neg H(y)))$
+    
+    $\exists x ( M(x)\land  \forall y(F(y,x) \rightarrow \neg H(y)))$
+    
+    There exist an x such that x is a math major and for all y if they are friends of x they need help in his/her homework
+    \item
+    R(a,b)= a is a roommate of b, L(a,b)= a likes b
+    
+    $\forall x \exists y(R(y,x) \land \forall z \neg L(y,z))$
+    
+    $\neg \forall x \exists y(R(y,x) \land \forall z \neg L(y,z))$
+    
+    $\exists x \neg \exists y(R(y,x) \land \forall z \neg L(y,z))$
+    
+    $\exists x \forall y \neg (R(y,x) \land \forall z \neg L(y,z))$
+    
+    $\exists x \forall y (\neg R(y,x) \lor \neg \forall z \neg L(y,z))$
+    
+    $\exists x \forall y (\neg R(y,x) \lor \exists z L(y,z))$
+    
+    $\exists x \forall y (R(y,x) \rightarrow \exists z L(y,z))$
+    
+    There exists an x such that for all y  if y is a roommate of x then there exist z that is liked by y
+    \item
+    $A \cup B \subset C \setminus D$
+    
+    $\forall x[( x \in A \lor x \in B) \rightarrow (x \in C \land \neg x \in D)]$
+    
+    $\neg \forall x[( x \in A \lor x \in B) \rightarrow (x \in C \land \neg x \in D)]$
+    
+    $\exists x  \neg [( x \in A \lor x \in B) \rightarrow (x \in C \land \neg x \in D)$
+    
+    $\exists x \neg [\neg ( x \in A \lor x \in B) \lor (x \in C \land \neg x \in D)]$
+    
+    $\exists x [( x \in A \lor x \in B) \land (x \in C \land \neg x \in D)]$
+    
+    $\exists x [(A \cup B)\cap (C \setminus D)]$
+    
+    There exists an x product of the intersection of the union of a and b $A \cup B$ and the difference of c and d $C \setminus D$
+    \item
+    $\exists x\forall y[y > x \rightarrow \exists z(z^2+ 5z = y)]$
+    
+    $\neg \exists x\forall y[y > x \rightarrow \exists z(z^2+ 5z = y)]$
+    
+    $\forall x\neg \forall y[y > x \rightarrow \exists z(z^2+ 5z = y)]$
+    
+    $\forall x\exists y \neg [y > x \rightarrow \exists z(z^2+ 5z = y)]$
+    
+    $\forall x\exists y \neg [\neg (y > x) \lor \exists z(z^2+ 5z = y)]$
+    
+    $\forall x\exists y [y > x \land \neg \exists z(z^2+ 5z = y)]$
+    
+    $\forall x\exists y [y > x \land \forall z\neg (z^2+ 5z = y)]$
+    
+    For every x there exists a y such that $[y > x \land \forall z\neg (z^2+ 5z = y)]$
+\end{enumerate}
+\subsection{3}
+Are these statements true or false? The universe of discourse is N.
+
+$(a) \forall x(x < 7 \rightarrow \exists a \exists b \exists c(a^2+b^2+c^2 = x)).$
+
+$(b) \exists! x(x^2+ 3 = 4x).$
+
+$(c) \exists! x(x^2= 4x + 5).$
+
+$(d) \exists x \exists y(x^2 = 4x + 5 \land y^2 = 4y + 5).$
+\begin{enumerate}[label=(\alph*)]
+    \item
+    True. For all x if $x < 7 $ then $\exists a \exists b \exists c(a^2+b^2+c^2 = x))$. 
+    \item
+    False. There exists only one x such that $(x^2+ 3 = 4x)$. The condition can be accomplished with 1 and 3.
+    \item
+    True. There exists only one x such that $(x^2= 4x + 5)$. There are 2 solutions 5 and -1 but since -1 isn't inside the universe it is 5.
+    \item
+    True. It is the same as c. Since both parts of the and condition are solved with 5 it is true.
+\end{enumerate}
+\subsection{4}
+Show that the second quantifier negation law, which says that
+$\neg \forall xP(x)$ is equivalent to $\exists x\neg P(x)$, can be derived from the first,
+which says that $\neg \exists xP(x)$ is equivalent to $\forall x\neg P(x)$. (Hint: Use the
+double negation law.)
+
+
+$\neg \exists xP(x) \Leftrightarrow \forall x\neg P(x)$
+
+Replace P(x) with $\neg P(x)$
+
+$\neg \exists x \neg P(x) \Leftrightarrow \forall x\neg \neg P(x)$
+
+$\neg \exists x \neg P(x) \Leftrightarrow \forall x P(x)$ (Double Negation law)
+
+$\neg (\neg \exists x \neg P(x)) \Leftrightarrow \neg  (\forall x P(x))$
+
+$\exists x \neg P(x) \Leftrightarrow \neg \forall x P(x)$ (De Morgan's law, Double negation)
+\subsection{5}
+Show that $\neg \exists x \in A \ P(x)$ is equivalent to $\forall x \in A  \ \neg P(x)$.
+
+$\neg \exists x \in A \ P(x)\Leftrightarrow \neg \exists x (x\in A \land P(x))$ (Equivalences abbreviation)
+
+$\neg \exists x (x\in A \land P(x)) \leftrightarrow \forall x \neg(x\in A \land P(x))$ (Quantifier Negation law)
+
+$\forall x \neg(x\in A \land P(x)) \Leftrightarrow \forall x (\neg (x\in A) \lor \neg P(x))$(De Morgan's law) %mind the parentheses 
+
+$\forall x (\neg (x\in A) \lor \neg P(x)) \Leftrightarrow \forall x (x\in A \rightarrow \neg P(x))$ (Conditional law)
+
+$\forall x (x\in A \rightarrow \neg P(x)) \Leftrightarrow \forall x \in A  \ \neg P(x)$ (Equivalence Abbreviation)
+\subsection{6}
+Show that the existential quantifier distributes over disjunction. In
+other words, show that $\exists x(P(x) \lor Q(x))$ is equivalent to $\exists xP(x) \lor
+\exists xQ(x)$. (Hint: Use the fact, discussed in this section, that the
+universal quantifier distributes over conjunction.)
+
+I had to look for this hint at the end of the book: "Hint: Begin by showing that $\exists x(P(x) \lor Q(x))$ is equivalent to
+$\neg \forall x\neg (P(x) \lor Q(x)).$"
+
+$\exists x(P(x) \lor Q(x)) \Leftrightarrow \neg \neg (\exists x(P(x) \lor Q(x)))$ (Double Negation law)
+
+$\neg \neg (\exists x(P(x) \lor Q(x))) \Leftrightarrow \neg \forall x \neg (P(x) \lor Q(x))$(Quantifier Negation law)
+
+$\neg \forall x\neg (P(x) \lor Q(x)) \Leftrightarrow \neg [\forall x (\neg P(x) \land \neg Q(x))]$ (De Morgan's law)
+
+$\neg[ \forall x (\neg P(x) \land \neg Q(x)) ]\Leftrightarrow \neg[ \forall x \neg P(x) \land \forall x\neg Q(x))]$(Universal Quantifier distributes over conjunction)
+
+$\neg [\forall x \neg P(x) \land \forall x\neg Q(x) ]\Leftrightarrow \neg[ \neg \exists x P(x) \land \neg \exists Q(x)$(Quantifier Negation law)
+
+$\neg[ \neg \exists x P(x) \land \neg \exists Q(x) \Leftrightarrow \exists xP(x) \lor \exists xQ(x) $(Double Negation law)
+
+
+Therefor $\exists x(P(x) \lor Q(x)) \Leftrightarrow \exists xP(x) \lor
+\exists xQ(x)$
+\subsection{7}
+Show that $\exists (P(x) \rightarrow Q(x))$ is equivalent to $\forall xP(x) \rightarrow \exists xQ(x)$.
+
+$\exists (P(x) \rightarrow Q(x)) \Leftrightarrow \exists (\neg P(x) \lor Q(x))$  (Conditional law)
+
+$\exists (\neg P(x) \lor Q(x)) \Leftrightarrow \exists \neg P(x) \lor \exists x Q(x))$ (Universal Quantifier distributes over dis junction)
+
+$\exists \neg P(x) \lor \exists x Q(x)) \Leftrightarrow \neg \forall P(x) \lor \exists x Q(x))$ (Quantifier Negation law)
+
+$\neg \forall P(x) \lor \exists x Q(x)) \Leftrightarrow \forall P(x) \rightarrow \exists x Q(x))$ (Conditional law)
+
+\subsection{8}
+Show that $(\forall x \in A \ P(x)) \land (\forall x \in B  \ P(x))$ is equivalent to $\forall x \in (A \cup B) P(x)$. (Hint: Start by writing out the meanings of the bounded
+quantifiers in terms of unbounded quantifiers.)
+
+$(\forall x \in A \ P(x)) \land (\forall x \in B  \ P(x))\Leftrightarrow \forall x (x\in A \rightarrow P(x)) \land \forall x (x\in B  \rightarrow P(x)) $ (Expanding abbreviation equivalence)
+
+$\forall x (x\in A \rightarrow P(x)) \land \forall x (x\in B  \rightarrow P(x)) \Leftrightarrow \forall x (\neg (x\in A) \lor P(x)) \land \forall x (\neg (x\in B)  \lor P(x))$
+
+$\forall x (\neg (x\in A) \lor P(x)) \land \forall x (\neg (x\in B)  \lor P(x)) \Leftrightarrow \forall x(P(x)\lor(\neg(x \in A)\land (\neg (x \in B))$
+
+$\forall x(P(x)\lor(\neg(x \in A)\land (\neg (x \in B)) \Leftrightarrow \forall x(P(x)\lor(x \notin A)\land (x \notin B))$ 
+
+$\forall x(P(x)\lor(x \notin A)\land (x \notin B)) \Leftrightarrow \forall x(P(x)\lor \neg[(x \in A)\lor (x \in B))]$
+
+$\forall x(P(x)\lor \neg[(x \in A)\lor (x \in B)] \Leftrightarrow  \forall x[(x \in A)\lor (x \in B)]\rightarrow P(X)$ (Conditional law)
+
+$\forall x[(x \in A)\lor (x \in B)]\rightarrow P(X) \Leftrightarrow \forall x \in (A \cup B) P(x)$ (Expanding abbreviation equivalence)
+\subsection{9}
+Is $\forall x(P(x) \lor Q(x))$ equivalent to $\forall xP(x) \lor \forall xQ(x)$? Explain. (Hint:
+Try assigning meanings to $P(x) and Q(x).$)
+
+I couldn't find a solution with equivalences:
+
+P(x)= Heads
+
+Q(x)= Tails
+
+The universe of discourse is coin toss:
+
+Therefore:
+$\forall x(P(x) \lor Q(x))\Leftrightarrow \forall xP(x) \lor \forall xQ(x)$
+
+Means: All coin toss are either Heads or Tails is equivalent to all coin toss are heads or all coin toss are tails.
+
+The first part is true(and also a tautology) the second part isn't true. 
+
+\subsection{14}
+Show that the statements $A \cap B = \emptyset \ and  \ A \setminus B = A$ are equivalent.
+
+I did it graphically. Discord
+\subsection{15}
+Let T(x, y) mean “x is a teacher of y.” What do the following
+statements mean? Under what circumstances would each one be true?
+Are any of them equivalent to each other?
+
+(a) $\exists ! yT(x, y)$.
+
+(b) $\exists x \exists ! yT(x, y)$.
+
+(c) $\exists ! x\exists yT(x, y)$.
+
+(d) $\exists y \exists ! xT(x, y)$.
+
+(e) $\exists ! x \exists ! yT(x, y)$.
+
+(f) $\exists x \exists y[T(x, y) \land  \neg \exists u \exists v(T (u, v) \land (u \neq x \lor v \neq y))]$.
+
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    x is a teacher of one y
+    \item
+    The exists a teacher x so that he only teaches one student y. A teacher with only one student.
+    \item
+    There exists one teacher x that teaches a student y. A student that has only one teacher.
+    \item
+    There exists a y that is teach by one x. A student that has only one teacher. It is equivalent to (c)
+    \item
+    There exist only one teacher x with only one student y. A teacher that has only one student, this students only has this teacher.
+    \item
+    $\exists x \exists y[T(x, y) \land  \neg \exists u \exists v(T (u, v) \land (u \neq x \lor v \neq y))]$
+    is equivalent to 
+    
+    $\exists x \exists y[T(x, y) \land  \neg \exists u \exists v(T (u, v) \land \neg (u = x \land v = y))]$
+    
+    $\exists x \exists y[T(x, y) \land  \forall u \neg \exists v(T (u, v) \land \neg (u = x \land v = y))]$
+    
+    $\exists x \exists y[T(x, y) \land  \forall u \forall v \neg (T (u, v) \land \neg (u = x \land v = y))]$
+    
+    $\exists x \exists y[T(x, y) \land  \forall u \forall v (\neg T (u, v) \lor  (u = x \land v = y))]$
+    
+    $\exists x \exists y[T(x, y) \land  \forall u \forall v ( T (u, v) \rightarrow  (u = x \land v = y))]$
+    
+    There exists an x and a y such that x is a teacher of y and all x teaches all y. Because there exist a teacher x and teacher y so that x only teaches y and y only receives teaching from y. That x and y that exists are all the ones that exists.
+    Therefore it is equivalent to (e)
+\end{enumerate}
+\section{Exercises 2.3}
+\subsection{1}
+Analyze the logical forms of the following statements. You may use
+the symbols $\in, \notin, =, \neq, \land, \lor, \rightarrow, \leftrightarrow, \forall,$ and $\exists$ in your answers, but not $\subseteq, \nsubseteq, \mathscr{P}, \cap, \cup, \, \{ \ ,\},$ or $\neg$ (Thus, you must write out the definitions of some set theory notation, and you must use equivalences to get rid of any occurrences of $\neg$.)
+
+(a) $\mathcal{F} \subseteq \mathscr{P}(A)$.
+
+(b) $A \subseteq \{ 2n + 1 | n \in \mathbf{N} \}$.
+
+(c) $\{ n^2 + n + 1 | n \in \mathbf{N} \} \subseteq \{2n + 1 | n \in \mathbf{N} \}.$
+
+(d) $\mathscr{P}(\bigcup_{i \in I} A_i) \nsubseteq \bigcup_{i \in I}\mathscr{P}(Ai)$
+
+\begin{enumerate}[label=(\alph*)]
+    \item
+    $\mathcal{F} \subseteq \mathscr{P}(A)$
+    
+    $\Leftrightarrow$
+    
+    $\forall x(x \in \mathcal{F} \rightarrow x \in \mathscr{P}(A))$
+    
+    $\Leftrightarrow$
+    
+    $\forall x(x \in \mathcal{F} \rightarrow x \subseteq \mathscr{P}(A))$
+    
+    $\Leftrightarrow$
+    
+    $\forall x(x \in \mathcal{F} \rightarrow \forall y (y \in x \rightarrow y \in \mathscr{P}(A)))$
+    \item
+    $A \subseteq \{ 2n + 1 | n \in \mathbf{N} \}$
+    
+    $\Leftrightarrow$
+    
+    $\forall x ( x \in A \rightarrow  x \in \{ 2n + 1 | n \in \mathbf{N} \})$
+    
+    $\Leftrightarrow$
+    
+    $\forall x ( x \in A \rightarrow  \exists n \in \mathbf{N} (x = 2n + 1))$
+    \item
+    $\{ n^2 + n + 1 | n \in \mathbf{N} \} \subseteq \{2n + 1 | n \in \mathbf{N} \}$
+    
+    $\Leftrightarrow$
+    
+    $\forall x (x \in \{ n^2 + n + 1 | n \in \mathbf{N} \} \rightarrow  x \in \{2n + 1 | n \in \mathbf{N} \})$
+    
+    $\Leftrightarrow$
+    
+    $\forall x (\exists n \in \mathbf{N}(x = n^2 + n + 1) \rightarrow \exists n \in \mathbf{N}(x = 2n + 1)$
+    \item
+    $\mathscr{P}(\bigcup_{i \in I} A_i) \nsubseteq \bigcup_{i \in I}\mathscr{P}(Ai)$
+    
+    $\Leftrightarrow$
+    
+    $\exists x(x \in \mathscr{P}(\bigcup_{i \in I} A_i)) \land x \notin (\bigcup_{i \in I}\mathscr{P}(Ai))$
+    
+    $\Leftrightarrow$
+    
+    $\exists x[\forall y (y \in x \rightarrow y \in \bigcup_{i \in I} A_i) \land x \notin (\bigcup_{i \in I}\mathscr{P}(Ai))]$
+    
+    $\Leftrightarrow$
+    
+    $\exists x[\forall y (y \in x \rightarrow \exists i \in I  (x \in Ai)) \land x \notin (\bigcup_{i \in I}\mathscr{P}(Ai))]$
+    
+    $\Leftrightarrow$
+    
+    $\exists x[\forall y (y \in x \rightarrow \exists i \in I  (x \in Ai)) \land \neg (x \in (\bigcup_{i \in I}\mathscr{P}(Ai))]$
+    
+    $\Leftrightarrow$
+    
+    $\exists x[\forall y (y \in x \rightarrow \exists i \in I  (x \in Ai)) \land \neg (\exists i \in  I \forall x (x \in y  \rightarrow x \in P (Ai))]$
+    
+    $\Leftrightarrow$
+    
+    $\exists x[\forall y (y \in x \rightarrow \exists i \in I  (x \in Ai)) \land \neg (\exists i \in  I \forall x (x \in y  \rightarrow (x \in \rightarrow x \in Ai)]$
+    
+    $\Leftrightarrow$
+    
+    $\exists x[\forall y (y \in x \rightarrow \exists i \in I  (x \in Ai)) \land \neg (\exists i \in  I \forall x (x \notin y  \lor (x \notin \lor x \in Ai)]$
+    
+    $\Leftrightarrow$
+    
+    $\exists x[\forall y (y \in x \rightarrow \exists i \in I  (x \in Ai)) \land \neg (\exists i \in  I \forall x (x \notin y  \lor x \notin \lor x \in Ai)]$
+    
+    $\Leftrightarrow$
+    
+    $\exists x[\forall y (y \in x \rightarrow \exists i \in I  (x \in Ai)) \land \neg (\exists i \in  I \forall x ( x \notin y \lor x \in Ai)]$
+    
+    $\Leftrightarrow$
+    
+    $\exists x[\forall y (y \in x \rightarrow \exists i \in I  (x \in Ai)) \land (\neg \exists i \in  I \forall x ( x \notin y \lor x \in Ai)]$
+    
+    $\Leftrightarrow$
+    
+    $\exists x[\forall y (y \in x \rightarrow \exists i \in I  (x \in Ai)) \land (\forall i \in  I \exists x \neg ( x \notin y \lor x \in Ai)]$
+    
+    $\Leftrightarrow$
+    
+    $\exists x[\forall y (y \in x \rightarrow \exists i \in I  (x \in Ai)) \land (\forall i \in  I \exists x  ( x \in y \land x \notin Ai)]$
+\end{enumerate}
+\subsection{3}
+We’ve seen that $\mathscr{P}(\emptyset) = \{ \emptyset \}, and \{ \emptyset \} = \emptyset$. What is $\mathscr{P}(\{ \emptyset \})$?
+
+It should be the same as:
+$A= \{ \emptyset \}$
+
+$\mathscr{P}(\{ \emptyset \}) \Leftrightarrow \mathscr{P}(A)$
+
+Thus 
+
+$\mathscr{P}(A) = \emptyset , \{ \emptyset \}$
+\subsection{8}
+Let $I = \{2, 3\}$, and for each $i \in I$ let $A_i = \{i, 2i \}$ and $B_i = \{i, i + 1 \}$.
+ 
+(a) List the elements of the sets $A_i$ and $B_i$ for $i \in I$.
+
+(b) Find $\bigcap_{i \in I}(A_i \cup B_i)$ and $(\bigcap_{i \in I} A_i) \cup (\bigcap_{i \in I}B_i)$ Are they the same? 
+
+(c) In parts (c) and (d) of exercise 2 you analyzed the statements $x \in \bigcap_{i \in I}
+(A_i \cup B_i)$ and $x \in (\bigcap_{i \in I} A_i) \cup (\bigcap_{i \in I}B_i)$
+What can you conclude
+from your answer to part (b) about whether or not these statements
+are equivalent?
+\begin{enumerate}[label=(\alph*)]
+    \item
+    
+    $A_2=\{ 2,4 \}$
+    $A_3=\{ 3,6 \}$
+    $B_2=\{ 2,3 \}$
+    $B_3=\{ 3,4 \}$
+    \item
+    $\bigcap_{i \in I}(A_i \cup B_i)$:
+    
+    $(A_2 \cup B_2)= \{ 2,3,4 \}$
+    $(A_3 \cup B_3)= \{ 3,4,6 \}$
+    
+    $\bigcap_{i \in I}(A_i \cup B_i)= \{ 3,4 \}$
+    
+    \
+    
+    $(\bigcap_{i \in I} A_i) \cup (\bigcap_{i \in I}B_i)$:
+    
+    $(\bigcap_{i \in I} A_i)=\emptyset$
+    
+    $(\bigcap_{i \in I}B_i)= \{ 3 \}$
+    
+    $(\bigcap_{i \in I} A_i) \cup (\bigcap_{i \in I}B_i)= \{ 3 \}$
+    
+    They are not the same
+    
+    \item
+    They are not equivalent, because they do not give the same sets as results when using the same universe. The intersection of sets can not be distributed
+\end{enumerate}
+\subsection{12}
+Give examples of sets A and B for which $\mathscr{P}(A \cup B) = \mathscr{P}(A) \cup \mathscr{P}(B)$.
+
+$A= \{ 1,2 \}$
+
+$B= \{ 2,3 \}$
+
+$\mathscr{P}(A) \cup \mathscr{P}(B)$:
+
+$\mathscr{P}(A)= \emptyset,\{ 1 \}, \{ 2 \}, \{ 1,2 \} $
+
+$\mathscr{P}(B)= \emptyset,\{ 2 \}, \{ 3 \}, \{ 2,3 \}$
+
+$\mathscr{P}(A) \cup \mathscr{P}(B)=\emptyset,\{ 1 \}, \{ 2 \}, \{ 3 \} ,\{ 1,2 \}, \{ 2,3 \} $
+
+\
+
+$\mathscr{P}(A \cup B)$:
+
+$(A \cup B)= \{ 1,2,3 \}$
+
+$\mathscr{P}(A \cup B)=\emptyset,\{ 1\}, \{ 2\}, \{ 3\},\{ 1,2 \}, \{ 2,3 \}, \{ 1,2,3 \}$
+
+They are not equivalent:
+$\emptyset,\{ 1 \}, \{ 2 \}, \{ 3 \} ,\{ 1,2 \}, \{ 2,3 \} \neq \emptyset,\{ 1\}, \{ 2\}, \{ 3\},\{ 1,2 \}, \{ 2,3 \}, \{ 1,2,3 \}$
+\subsection{13}
+Verify the following identities by writing out (using logical symbols)
+what it means for an object x to be an element of each set and then
+using logical equivalences.
+
+(a)$\bigcup_{i \in I}(A_i \cup B_i)= (\bigcup_{i \in I} A_i)\cup(\bigcup_{i \in I} B_i))$
+
+(b)$(\bigcap \mathcal{F})\cap(\bigcap \mathcal{G})= \bigcap(\mathcal{F} \cup \mathcal{G})$
+
+(c)$\bigcap_{i \in I}(A_i \setminus B_i)= (\bigcap_{i \in I} A_i) \setminus \bigcap_{i \in I} B_i)$
+
+\begin{enumerate}[label=(\alph*)]
+    \item
+    $\bigcup_{i \in I}(A_i \cup B_i)$ 
+    
+    $\Leftrightarrow$
+    
+    $ x \in \bigcup_{i \in I}(A_i \cup B_i)$
+    
+    $\Leftrightarrow$
+    
+    $\forall x (\exists i \in I (x \in Ai \lor x \in Bi))$
+    
+    $\Leftrightarrow$
+    
+    $\forall x (\exists i \in I (x \in Ai) \lor \exists i \in I (x \in Bi))$
+    
+    $\Leftrightarrow$
+    
+    $(\bigcup_{i \in I} A_i)\cup(\bigcup_{i \in I} B_i))$
+    \item
+    $(\bigcap \mathcal{F})\cap(\bigcap \mathcal{G})$
+    
+    $\Leftrightarrow$
+    
+    $\forall A(A \in \mathcal{F} \rightarrow x \in A) \cap \forall A(A \in \mathcal{G} \rightarrow x \in A)$
+    
+    $\Leftrightarrow$
+    
+    $\forall A[(A \notin \mathcal{F} \lor x \in A) \land (A \notin \mathcal{G} \lor x \in A)]$
+    
+    $\Leftrightarrow$
+    
+    $\forall A[(A \notin \mathcal{F} \land A \notin \mathcal{G}) \lor ( x \in A)]$(Distributive law)
+    
+    $\Leftrightarrow$
+    
+    $\forall A[\neg (A \in \mathcal{F} \lor A \in \mathcal{G}) \lor ( x \in A)]$(De Morgan's law)
+    
+    $\Leftrightarrow$
+    
+    $\forall A[(A \in \mathcal{F} \lor A \in \mathcal{G}) \rightarrow ( x \in A)]$
+    
+    $\Leftrightarrow$
+    
+    $\bigcap(\mathcal{F} \cup \mathcal{G})$
+    \item
+    $\bigcap_{i \in I}(A_i \setminus B_i)$
+    
+    $\Leftrightarrow$
+    
+    $\forall x (\forall i \in  I (x \in Ai \setminus x \in Bi)$
+    
+    $\Leftrightarrow$
+    
+    $\forall x (\forall i \in  I (x \in Ai \land x \notin Bi)$
+    
+    $\Leftrightarrow$
+    
+    $\forall x (\forall i \in  I (x \in Ai)\land \forall i \in  I (x \notin Bi))$
+    
+    $\Leftrightarrow$
+    
+    $(\bigcap_{i \in I} A_i) \setminus \bigcap_{i \in I} B_i)$
+\end{enumerate}
+\subsection{15}
+
+(a) Show that if $\mathcal{F} = \emptyset$, then the statement $x \in \bigcup \mathcal{F}$ will be false no
+matter what x is. It follows that $\bigcup\emptyset = \emptyset$.
+
+(b) Show that if $\mathcal{F} = \emptyset$, then the statement $x \in \bigcap \mathcal{F}$ will be true no
+matter what x is. In a context in which it is clear what the universe of
+discourse U is, we might therefore want to say that $\bigcap \emptyset = U$.
+However, this has the unfortunate consequence that the notation $\bigcap \emptyset$
+will mean different things in different contexts. Furthermore, when
+working with sets whose elements are sets, mathematicians often do
+not use a universe of discourse at all. (For more on this, see the next
+exercise.) For these reasons, some mathematicians consider the
+notation $\bigcap \emptyset$ to be meaningless. We will avoid this problem in this
+book by using the notation $\bigcap \mathcal{F}$ only in contexts in which we can be
+sure that $\mathcal{F} \neq \emptyset$.
+\begin{enumerate}[label=(\alph*)]
+    \item
+    \item
+\end{enumerate}
+ \section{Exercises 1.4 RESTART}
+\subsection{1}
+Let $A = \{1, 3, 12, 35\}, B = \{3, 7, 12, 20\}$, and $C = \{x \vert x \ is \ a \ prime \ number\}$. List the elements of the following sets. Are any of the sets below disjoint from any of the others? Are any of the sets below
+subsets of any others?
+
+(a) $A \cap B$.
+
+(b) $(A \cup B) \setminus C$.
+
+(c) d.
+
+\begin{enumerate}[label=(\alph*)]
+    \item
+$A\cap B \equiv \{3,12\}$
+    \item
+$(A \cup B)\setminus C \equiv \{1,12,20,35 \}$
+    \item
+$A \cup (B \setminus C)\equiv \{1,3,12,20,35\}$
+\end{enumerate}
+All of the sets are connected to each other by at least 1 number. a is a subset of c, and b is a subset of c. Since all the elements of the subset also belong to the larger set.
+\subsection{2}
+Let $A = \{$United States, Germany, China, Australia$\}, B = \{ $Germany, France, India, Brazil$v\}$, and $C = \{x \vert  x$ is a country in Europe$\}$. List the elements of the following sets. Are any of the sets below disjoint from any of the other? Are any of the sets below subsets of any other?
+
+(a) $A \cup B$
+
+(b)$(A \cap B)\setminus C$
+
+(c)$(B \cap C)\setminus A$
+\begin{enumerate}[label = (\alph*)]
+    \item 
+$A \cup B \equiv \{$United States, Germany, China, Australia, France, India, Brazil$\}$
+    \item 
+$(A \cap B)\setminus C \equiv \{ \}$
+    \item
+$(B \cap C)\setminus A \equiv \{$ France $\}$
+\end{enumerate}
+\subsection{4}
+Use Venn diagrams to verify the following identities:
+
+(a)$A \setminus(A \cap B)= A \setminus B$
+
+(b)$A \cup (B \cap C) = (A \cup B)\cap (A \cup C)$
+
+\subsection{5}
+Verify the identities in exercise 4 by writing out (using logical symbols) what it means for an object x to be an element of each set and then using logical equivalences.
+\begin{enumerate}[label = (\alph*)]
+    \item 
+    $A \setminus(A \cap B)= A \setminus B \equiv x \in A \land \neg (x \in A \land x \in B)$ 
+    \\
+    $\equiv x \in A \land (x \notin A \lor x \notin B)$ De Morgan's Law
+    \\
+    $\equiv (x \in A \land x \notin A) \lor (x \in A \land x \notin B)$ Distributive Law
+    \\
+    $\equiv False \lor (x \in A \land x \notin B)$ Contradiction(Complément)
+    \\
+    $\equiv x \in A \land x \notin B$ 
+    Contradiction law(Domination)
+    \\
+    Therefore $(x \in A \land  x \notin B ) \equiv A \setminus B$
+    \item
+    $A \cup (B \cap C) = (A \cup B)\cap (A \cup C)$
+    \\
+    $A \cup (B \cap C) \equiv (A \cup B)\cap (A \cup C)$Distributive laws (Distributivité)
+\end{enumerate}
+\subsection{10}
+It was shown in this section that for any sets A and B, $(A \cup B) \setminus B \subset A$.
+
+(a) Give an example of two sets A and B for which $(A \cup B) \setminus B \neq A$.
+
+(b) Show that for all sets A and B, $(A \cup B) \setminus B = A \setminus B$.
+
+\begin{enumerate}[label=(\alph*)]
+    \item 
+   A and B need to have an element in common so that when we remove B, A is not complete.
+   
+   $A=\{1,2 \}$
+   $B=\{2,3,4 \}$
+   
+    \item
+    $(A \cup B) \setminus B = A \setminus B$ = $(x \in A \lor x \in B) \land \neg (x \in B)$ 
+    
+    $\equiv (x \in A \lor x \in B) \land  (x \notin B)$ De Morgan's law
+    
+    $\equiv (x \notin B) \land (x \in B \lor x \in A)$ Commutative law 
+    
+    $\equiv (x\notin B \land x \in B ) \lor (x \notin B \land x \in A)$ Distributive law
+    
+    $\equiv False \lor (x\notin B \land x \in A)$Contradiction (Identite)
+    
+    $\equiv (x\notin B \land x \in A)$ Contradiction law(Domination)
+    
+    $\equiv x\in A \land x \notin B$ Commutative law
+    
+    $\equiv (A \setminus B)$
+    
+    Therefore $(A \cup B) \setminus B \equiv A \setminus B$
+\end{enumerate}
+\section{Exercises 1.5}
+\subsection{1}
+Analyze the logical forms of the following statements:
+
+(a) If this gas either has an unpleasant smell or is not explosive, then it
+isn’t hydrogen.
+
+(b) Having both a fever and a headache is a sufficient condition for
+George to go to the doctor.
+
+(c) Both having a fever and having a headache are sufficient conditions
+for George to go to the doctor.
+
+(d) If $x \neq 2$, then a necessary condition for x to be prime is that x be odd.
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    P=Pleasant smell, E= Explosive, H=Hydrogen
+    
+    $(\neg P \lor \neg E)\rightarrow \neg H$ 
+    is equivalent to $\neg (P \land E) \rightarrow \neg H$ is equivalent to $H \rightarrow (P \land E)$
+    \item
+    F=Fever, H=Headache, G=Go to the doctor
+    
+    $(F\land H)\rightarrow G$
+    \item
+    F= Fever, H=Headache, G=Go to the doctor
+    
+    $(F\rightarrow G) \land (H\rightarrow G)$
+    \item
+    P(x)= x is prime, O(x)=odd
+    
+    $x \neq 2 \rightarrow(P(x) \rightarrow O(x))$
+\end{enumerate}
+\subsection{6}
+(a) Show that $P \leftrightarrow Q$ is equivalent to $(P \land Q) \lor (\neg P \land \neg Q)$.
+\\
+(b) Show that $(P \rightarrow Q) \lor (P \rightarrow R)$ is equivalent to $P \rightarrow (Q \lor R)$.
+\begin{enumerate} [label=(\alph*)]
+    \item 
+    $P \leftrightarrow Q$ is equivalent to $(P \rightarrow Q) \land (Q \rightarrow P)$ Biconditional statement
+    
+    $(P \rightarrow Q) \land (Q \rightarrow P)$ is equivalent to $(\neg P \lor Q) \land (\neg Q \lor P)$ Conditional law
+    
+    $(\neg P \lor Q) \land (\neg Q \lor P)$ is equivalent to $[(\neg P \lor  Q ) \land  \neg Q]\lor [(\neg P \lor Q )\land P]$ Distributive law
+    
+    $[(\neg P \lor  Q ) \land  \neg Q]\lor [(\neg P \lor Q )\land P]$ is equivalent to $[(\neg Q \land Q)\lor (\neg Q \land \neg P)]\lor[(P \land Q)\lor(P \land \neg P)]$ Distributive law
+    
+    $[(\neg Q \land Q)\lor (\neg Q \land \neg P)]\lor[(P \land Q)\lor(P \land \neg P)]$ is equivalent to $(\neg Q \land \neg P) \lor (P \land Q)$ Contradiction law
+    
+    $(\neg Q \land \neg P) \lor (P \land Q)$ is equivalent to $(P \land Q) \lor (\neg P \land \neg Q)$ Commutative law
+    
+    Therefore $P \leftrightarrow Q$ is equivalent to $(P \land Q) \lor (\neg P \land \neg Q)$
+    \item
+    $(P \rightarrow Q) \lor (P \rightarrow R)$ is equivalent to $(\neg P \lor Q) \lor (\neg P \lor R)$ Conditional law
+    
+    $(\neg P \lor Q) \lor (\neg P \lor R)$ is equivalent to $(\neg P \lor \neg P ) \lor (Q \lor R)$ Commutative law
+    
+    $(\neg P \lor \neg P ) \lor (Q \lor R)$ is equivalent to $\neg P \lor (Q \lor R)$ Idempotent law
+    
+    $\neg P \lor (Q \lor R)$ is equivalent to $P \rightarrow (Q \lor R)$ Conditional law
+    
+    Therefore $(P \rightarrow Q) \lor (P \rightarrow R)$ is equivalent to $P \rightarrow (Q \lor R)$
+\end{enumerate}
+\subsection{7}
+(a) Show that $(P \rightarrow R) \land (Q \rightarrow R)$ is equivalent to $(P \lor Q) \rightarrow R$.
+
+(b) Formulate and verify a similar equivalence involving $(P \rightarrow R) \lor (Q
+\rightarrow R)$.
+\begin{enumerate} [label=(\alph*)]
+    \item 
+    $(P \rightarrow R) \land (Q \rightarrow R)$ is equivalent to $(\neg P \lor R ) \land ( \neg Q \lor R)$ Conditional law
+    
+    $(\neg P \lor R ) \land ( \neg Q \lor R)$ is equivalent to $R \lor ( \neg P \land \neg Q)$ Distributive law
+    
+    $R \lor ( \neg P \land \neg Q)$ is equivalent to $R \lor \neg ( P \lor Q)$ De Morgan's law
+    
+    $R \lor \neg ( P \lor Q)$ is equivalent to $(P \lor Q) \rightarrow R$ Conditional law
+    \item
+    $(P \rightarrow R) \lor (Q\rightarrow R)$ is equivalent to $(\neg P \lor R)\lor(\neg Q \lor R)$ Conditional law
+    
+    $(\neg P \lor R)\lor(\neg Q \lor R)$ is equivalent to $(\neg P \lor \neg Q)\lor(R\lor R)$ Commutative and associative laws
+    
+    $(\neg P \lor \neg Q)\lor(R\lor R)$ is equivalent to $(\neg P \lor \neg Q)\lor R$ Idempotent law
+    
+    $(\neg P \lor \neg Q)\lor R$ is equivalent to $\neg (P \land Q) \lor R$ De Morgan's law
+    
+    $\neg (P \land Q) \lor R$ is equivalent to $(P\land Q) \rightarrow R$ Conditional law
+    
+    Therefore $(P\land Q) \rightarrow R$ is equivalent to $(P \rightarrow R) \lor (Q\rightarrow R)$
+\end{enumerate}
+\subsection{8}
+(a) Show that $(P \rightarrow Q) \land (Q \rightarrow R)$ is equivalent to $(P \rightarrow R) \land [(P \leftrightarrow
+Q)\lor (R \leftrightarrow Q)]$.
+
+(b) Show that $(P \rightarrow Q) \lor (Q \rightarrow R)$ is a tautology.
+\begin{enumerate} [label=(\alph*)]
+    \item 
+    $(P \rightarrow R) \land [(P \leftrightarrow Q)\lor (R \leftrightarrow Q)]$
+    
+    is equivalent to
+    
+    $(P \rightarrow R) \land \{[(P \rightarrow Q) \land (Q \rightarrow P)]\lor [(R \rightarrow Q) \land (Q \rightarrow R)]\}$ Bi conditional statement
+    
+    which is equivalent to
+    
+    
+    $(\neg P \lor R) \land \{[(\neg P \lor Q) \land (\neg Q \lor P)]\lor [(\neg R \lor Q) \land (\neg Q \lor R)]\}$ Conditional law
+    
+    which is equivalent to 
+    
+    $(\neg P \lor R)\land \{[(\neg P \lor  Q ) \land  \neg Q]\lor [(\neg P \lor Q )\land P] \lor [(\neg R \lor  Q ) \land  \neg Q]\lor [(\neg R \lor Q )\land R]\}$ Distributive law
+    
+    which is equivalent to 
+    
+    $(\neg P \lor R)\land \{[(\neg Q \land Q)\lor (\neg Q \land \neg P)]\lor[(P \land Q)\lor(P \land \neg P)] \lor [(\neg Q \land Q)\lor (\neg Q \land \neg R)]\lor[(R \land Q)\lor(R \land \neg R)]\}$ Distributive law
+    
+    which is equivalent to 
+    
+    $(\neg P \lor R)\land \{[(\neg Q \land \neg P)\lor(P \land Q)]\lor[(\neg Q  \land \neg R)\lor(R \land Q)] \}$ Contradiction law
+    
+    which is equivalent to 
+    
+    $(\neg P \lor R)\land \{[(\neg Q \land \neg P)\lor(\neg Q \land \neg R)]\lor[(P  \land Q)\lor(R \land Q)] \}$  Commutative and Associative law
+    
+    which is equivalent to
+    
+    $(\neg P \lor R)\land \{[\neg Q \land (\neg P \lor \neg R)]\lor[Q \land (P \lor R)] \}$ Distributive law
+    
+    which is equivalent to
+    
+    $\{\neg Q \land [(\neg P \lor R) \land (\neg P \lor \neg R)] \} \lor\{Q \land [(\neg P \lor R) \land (P \lor R)] \}$ Distributive law
+    
+    which is equivalent to
+    
+    $\{\neg Q \land [(\neg P  \lor (R\land \neg R)] \} \lor\{Q \land [ R \lor (P \land \neg P)] \}$ Distributive law
+    
+    which is equivalent to
+    
+    $(\neg Q \land \neg P)\lor( Q \land R)$ Contradiction law
+    
+    which is equivalent to
+    
+    $[(\neg Q \land \neg P)\lor Q]\land[(\neg Q \land \neg P)\lor R]$ Distributive law
+    
+    which is equivalent to
+    
+    $[(Q \lor \neg P)\land(Q \lor \neg Q)]\land[(\neg Q \land \neg P)\lor R]$ Distributive law
+    
+    which is equivalent to
+    
+    $(Q \lor  \neg P) \land (\neg Q \land \neg P) \lor R$ Contradiction law
+    
+    which is equivalent to
+    
+    $Q \lor (\neg P \land \neg P) \land \neg Q \lor R$ Commutative law
+    
+    which is equivalent to
+    
+    $(Q \lor \neg P ) \land (\neg Q \lor R)$ Idempotent law
+    
+    which is equivalent to
+    
+    $(P \rightarrow Q) \land (Q \rightarrow R)$ Conditional law
+    
+    Therefore $(P \rightarrow Q) \land (Q \rightarrow R)$ is equivalent to $(P \rightarrow R)\land [(P\leftrightarrow Q)\lor (R \leftrightarrow Q)]$
+    \item
+    $(P \rightarrow Q) \lor (Q \rightarrow R)$ is equivalent to $(\neg P \lor Q) \lor (\neg Q \lor R)$
+    
+    $(\neg P \lor Q) \lor (\neg Q \lor R)$ is equivalent to $(\neg P \lor R) \lor( Q \lor \neg Q)$ Commutative and Associative laws
+    
+    $( Q \lor \neg Q)$ is a tautology
+    
+    Taking into account the tautology law:$P \lor (tautology)= tautology$ 
+    
+    We can conclude that$(\neg P \lor R) \lor( Q \lor \neg Q)$ is a tautology and therefore $(P \rightarrow Q) \lor (Q \rightarrow R)$ is also a tautology
+\end{enumerate}
+\subsection{9}
+Find a formula involving only the connectives $\neg$ and $\rightarrow$ that is
+equivalent to $P \land Q$.
+
+Taking into account $P \rightarrow Q = \neg P \lor Q$
+
+$\neg P \rightarrow Q$ is equivalent to $\neg \neg P \lor Q$ Conditional law
+
+$\neg \neg P \lor Q$ is equivalent to $P \lor Q$ De Morgan's law
+
+Now we go backwards, we just need to put $\neg$ symbols to transform $\lor$ to $\land$
+
+$\neg (P \rightarrow \neg Q)$ is equivalent to $\neg (\neg P \lor \neg Q)$ Conditional law
+
+ $\neg (\neg P \lor \neg Q)$ is equivalent to $P \land Q$ De Morgan's law
+ 
+ 
+ Therefore $\neg (P \rightarrow \neg Q)$ is equivalent to $P \land Q$
+\subsection{11}
+(a) Show that $(P \lor Q) \leftrightarrow Q$ is equivalent to $P \rightarrow Q$.
+
+(b) Show that $(P \land Q) \leftrightarrow Q$ is equivalent to $Q \rightarrow P$.
+\begin{enumerate} [label=(\alph*)]
+    \item 
+    $(P \lor Q) \leftrightarrow Q$ is equivalent to $[(P \lor Q)\rightarrow Q]\land [Q \rightarrow (P \lor Q)]$ Bi conditional statement
+    
+    $[(P \lor Q)\rightarrow Q]\land [Q \rightarrow (P \lor Q)]$ is equivalent to $[\neg(P \lor Q)\lor Q]\land [\neg Q \lor(P \lor Q)]$ Conditional law
+    
+    $[\neg(P \lor Q)\lor Q]\land [\neg Q \lor(P \lor Q)]$ is equivalent to $[(\neg P \land \neg Q)\lor Q]\land [P \lor(\neg Q \lor Q)]$ De Morgan's and Commutative laws
+    
+    $[(\neg P \land \neg Q)\lor Q]\land [P \lor(\neg Q \lor Q)]$ is equivalent to $[(\neg P \land \neg Q)\lor Q]\land [tautology]$ Tautology law
+    
+    $[(\neg P \land \neg Q)\lor Q]\land [tautology]$ is equivalent to $[(\neg P \land \neg Q)\lor Q]$ Tautology law 
+    
+    $[(\neg P \land \neg Q)\lor Q]$ is equivalent to $[(Q \lor \neg Q)\land (Q \lor \neg P)]$ Distributive law
+    
+    $[(Q \lor \neg Q)\land (Q \lor \neg P)]$ is equivalent to $(\neg P \lor Q)$ Tautology law
+    
+    $(\neg P \lor Q)$ is equivalent to $P \rightarrow Q$
+     
+    Therefore $(P \lor Q) \leftrightarrow Q$ is equivalent to $P \rightarrow Q$
+    \item
+    $(P \land Q) \leftrightarrow Q$ is equivalent to $[(P \land Q)\rightarrow Q]\land[Q \rightarrow (P \land Q)]$ Bi conditional statement
+    
+    $[(P \land Q)\rightarrow Q]\land[Q \rightarrow (P \land Q)]$ is equivalent to $[\neg (P \land Q)\lor Q]\land[\neg Q \lor (P \land Q)]$ Conditional law
+    
+    $[\neg (P \land Q)\lor Q]\land[\neg Q \lor (P \land Q)]$ is equivalent to $[(\neg P \lor \neg Q)\lor Q]\land[\neg Q \lor (P \land Q)]$ De Morgan's law
+    
+    $[(\neg P \lor \neg Q)\lor Q]\land[\neg Q \lor (P \land Q)]$ is equivalent to $[(\neg Q \lor Q) \lor \neg P]\land[\neg Q \lor (P \land Q)]$ Commutative law 
+    
+    $[(\neg Q \lor Q) \lor \neg P]\land[\neg Q \lor (P \land Q)]$ is equivalent to $[(tautology) \lor \neg P]\land[\neg Q \lor (P \land Q)]$ Tautology law
+    
+    $[(tautology) \lor \neg P]\land[\neg Q \lor (P \land Q)]$ is equivalent to $[\neg Q \lor (P \land Q)]$ Tautology law
+    
+    $[\neg Q \lor (P \land Q)]$ is equivalent to $(\neg Q \lor P)\land(\neg Q\lor Q)$ Distributive law
+    
+    $(\neg Q \lor P)\land(\neg Q\lor Q)$ is equivalent to $(\neg Q \lor P)$ Tautology law
+    
+    $(\neg Q \lor P)$ is equivalent to $P \rightarrow P$
+    
+    Therefore $(P \land Q) \leftrightarrow Q$ is equivalent to $Q \rightarrow P$
+\end{enumerate}
+\section{Exercises 2.1}
+\subsection{1}
+Analyze the logical forms of the following statements.
+
+(a)Anyone who has forgiven at least one person is a saint.
+
+(b)Nobody in the calculus class is smarter than everyone in the discrete math class.
+
+(c)Everyone likes Mary, except Mary herself.
+
+(d)Jane saw a police officer, and Roger saw one too.
+
+(e)Jane saw a police officer, and Roger saw him too.
+\begin{enumerate}[label=(\alph*)]
+    \item 
+$\forall x [\exists y F(x,y) \rightarrow S(x)]$, where $F(x,y)$ stands for x has forgiven y. And S(x) means x is a saint.
+    \item
+$\neg \exists x  [C(x) \land \forall y (D(y) \rightarrow S(x,y))]$ stands for x is smarter than y. C(x) stands for x is in the calculus class and D(x) for x is the discrete math class.
+    \item
+$\forall x[L(x,m) \land \neg L(m,m)\land (x \neq m)]$ where L(x,y) means x likes y and m stands for Mary
+    \item
+$\exists p \exists i [T(j,p) \land  T(r,i) \land P(p) \land P(i)]$, where $T(x,y)$ stands for x saw y. $P(x)$ stands for x is a police officer.. j stands for Jane and r stands for Roger,
+    \item
+$\exists p \exists i [T(j,p) \land T(r,i)\land P(p) \land P(i) \land (p=i)]$, where $T(x,y)$ stands for x saw y. $P(x)$ stands for x is a police officer.  j stands for Jane and r stands for Roger
+\end{enumerate}
+\subsection{3}
+Analyze the logical forms of the following statements. The universe
+of discourse is $\mathbf{R}$. What are the free variables in each statement?
+
+(a) Every number that is larger than x is larger than y.
+
+(b) For every number a, the equation $ax^2 + 4x - 2 = 0$ has at least one
+solution iff $a \geq -2$.
+
+(c) All solutions of the inequality $x^3- 3x < 3$ are smaller than 10.
+ 
+(d) If there is a number x such that $x^2 + 5x = w$ and there is a number y
+such that $4 - y^2= w$, then w is strictly between -10 and 10.
+\begin{enumerate}[label=(\alph*)]
+    \item 
+$\forall n L(n,x)\rightarrow L(n,y)$, where L(x,y) stands for $x>y$
+    \item
+$\forall a \exists x (ax^2 + 4x - 2 = 0) \leftrightarrow a \geq -2$, where S(x,y) stands for x is a solution of y.
+    \item
+$\forall x (x^3- 3x < 3)\rightarrow x<10$
+    \item
+$(\exists x (x^2 + 5x = w) \land \exists y (4 - y^2= w))\rightarrow (-10<w<10)$
+\end{enumerate}
+\subsection{5}
+Translate the following statements into idiomatic mathematical
+English.
+
+(a) $\forall x[(P(x) \land \neg(x= 2)) \rightarrow O(x)]$, where P(x) means “x is a prime
+number” and O(x) means “x is odd.”
+
+(b) $\exists x[P(x) \land \forall y(P(y) \rightarrow y \leq x)]$, where P(x) means “x is a perfect
+number.”
+\begin{enumerate}[label=(\alph*)]
+    \item 
+For all x such that x is a prime and x is not equal to 2, then x is odd.
+    \item
+There exists a number x, so that x is a perfect number and is greater or equal than every other perfect number y.
+\end{enumerate}
+\subsection{7}
+Are these statements true or false? The universe of discourse is the set
+of all people, and P(x, y) means “x is a parent of y.”
+
+(a) $\exists x \forall yP(x, y)$.
+
+(b) $\forall x \exists yP(x, y)$.
+
+(c) $\neg \exists x \exists yP(x, y)$.
+
+(d) $\exists x\neg \exists yP(x, y)$.
+
+(e) $\exists x\exists y \neg P(x, y)$.
+\begin{enumerate}[label=(\alph*)]
+    \item
+    False There is just one parent for everyone.
+    \item
+    False Everyone (not only parents) have a child
+    \item
+    False For a child there is no parent. Everyone has a parent.
+    \item
+    True There exists someone without a child.
+    \item
+    True 2 persons exists, but they are not related as parent and child. You are not related like that to everyone.
+
+
+\end{enumerate}
+REMEMBER IN WHICH UNIVERSE OF DISCORD YOU ARE.
+\subsection{8}
+Are these statements true or false? The universe of discourse is $\mathbf{N}$.
+
+(a) $\forall x \exists y(2x - y = 0).$
+
+(b) $\exists y \forall x(2x - y = 0).$
+
+(c) $\forall x \exists y(x - 2y = 0).$
+
+(d) $\forall x(x <10 \rightarrow \forall y(y < x \rightarrow y < 9)).$
+
+(e) $\exists y\exists z(y + z = 100).$
+
+(f) $\forall x\exists y(y > x \land \exists z(y + z = 100)).$
+\begin{enumerate}[label=(\alph*)]
+\item 
+    True (For every x there exist a solution y) For every number x there is a y that is 2 times larger. It is true since there are infinitely many numbers.
+    \item
+    False (For all x there is just one solution) There is a number y that solves for all x this:$\exists y \forall x(2x - y = 0).$, that's false.
+    \item
+    False For every number x, there is a y that is it's half. Not true for natural number, since any odd number makes this statement false.
+    \item
+    True For any number x, if x $<$ 10 then for any number y, if y is less than x then y is less than 9. The $<$ and the conditional statement, make this possible.
+    \item
+    True There exists a number z so that added with another existing number y they result in 100.It is true for this existing universe 
+    \item
+    False For any number x, there exist a y that is bigger and a z that adds up to 100. Counter example x =100, y =101 but z needs to be -1 (not a natural number)
+\end{enumerate}
+\subsection{9}
+Same as exercise 8 but with $\mathbf{R}$ as the universe of discourse
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    True For every number x there is a y that is 2 times larger. It is true since there are infinitely many numbers.
+    \item
+    False There is a number y that solves for all x this:$\exists y \forall x(2x - y = 0).$, that's false.
+    \item
+    True For every number x, there is a y that is it's half. It is true when using a real numbers universe. Since you can have rational numbers and solve for the odd numbers.
+    \item
+    True For any number x, if $x<10$ then for any number y, if y is less than x then y is less than 9.
+    \item
+    True There exists a number z so that added with another existing number y they result in 100.It is true for this existing universe 
+    \item
+    True  For any number x, there exist a y that is bigger and a z that adds up to 100.
+\end{enumerate}
+\subsection{10}
+Same as exercise 8 but with $\mathbf{Z}$ as the universe of discourse
+\begin{enumerate}[label=(\alph*)]
+ \item 
+    True For every number x there is a y that is 2 times larger. It is true since there are infinitely many numbers
+    \item
+    False There is a number y that solves for all x this:$\exists y \forall x(2x - y = 0).$, that's false. 
+    \item
+    False It is false when using integer numbers universe. Since you can't have rational numbers and solve for the odd numbers.Example 7. you can't answer 3.5.
+    \item
+    True For any number x, if $x<10$ then for any number y, if y is less than x then y is less than 9.
+    \item
+    True There exists a number z so that added with another existing number y they result in 100.It is true for this existing universe
+    \item
+    True For any number x, there exist a y that is bigger and a z that adds up to 100.
+\end{enumerate}
+\section{Exercises 2.2}
+\subsection{1}
+Negate these statements and then re express the results as equivalent
+positive statements. (See Example 2.2.1.)
+
+(a) Everyone who is majoring in math has a friend who needs help with
+his or her homework.
+
+(b) Everyone has a roommate who dislikes everyone.
+
+(c) $A \cup B \subseteq C \setminus D$.
+
+(d) $\exists x\forall y[y > x \rightarrow \exists z(z^2+ 5z = y)]$.
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    M(a) a is majoring in math. F(a,b) a is a friend of b. H(y) y needs help with his/her homework.
+    
+    $\forall x (M(x)\rightarrow \exists y(F(y,x) \land H(y)))$
+    
+    $\neg \forall x (M(x)\rightarrow \exists y(F(y,x) \land H(y)))$
+    
+    $\exists x \neg (M(x)\rightarrow \exists y(F(y,x) \land H(y)))$
+    
+    $\exists x \neg (\neg M(x)\lor \exists y(F(y,x) \land H(y)))$
+    
+    $\exists x ( M(x)\land \neg \exists y(F(y,x) \land H(y)))$
+    
+    $\exists x ( M(x)\land  \forall y(\neg F(y,x) \lor \neg H(y)))$
+    
+    \underline{$\exists x ( M(x)\land  \forall y(F(y,x) \rightarrow \neg H(y)))$}
+    
+    There exists an x such that x is majoring in majoring in math and for all y if y is a friend of x then y doesn't need help with his/her homework.
+    \item
+    R(a,b) a is a roommate of b.
+    L(a,b) a likes b.
+    \\
+    $\forall x \exists y(R(y,x)\land \neg L(y,x))$
+    \\
+    $\neg[\forall x \exists y(R(y,x)\land \neg  L(y,x))]$
+    \\
+    $\exists x \forall y \neg ( R(y,x)\land  \neg L(y,x))$
+    \\
+    $\exists x \forall y(\neg R(y,x)\lor  L(y,x))$
+    \\
+    \underline{$\exists x \forall y (R(y,x)\rightarrow  L(y,x))$}
+    \\
+    There exists someone such that  if she has roommates she likes every roommates.
+    \item
+    $\forall x (x \in A \lor x \in B)\rightarrow(x \in C \land x \notin D)$
+    \\
+    $\neg [\forall x (x \in A \lor x \in B) \rightarrow (x \in C \land x \notin D)]$
+    \\
+    $\exists x \neg [(x \in A \lor x \in B)\rightarrow (x \in C \land x \notin D)]$
+    \\
+    $\exists x \neg[\neg(x \in A \lor x \in B) \lor (x \in C \land x \notin D)]$
+    \\
+    $\exists x [(x \in A \lor x \in B)\land \neg(x \in C \land x \notin D )]$
+    \\
+    $\exists x[(x \in A \lor x \in B)\land (x \notin C \lor x \in D)]$
+    \\
+    $\exists x[(A \cup B)\cap(x \notin C \lor x \in D)]$
+    \item
+    $\exists x \forall y [y > x \rightarrow \exists z(z^2+ 5z = y)]$
+    \\
+    $\neg \{ \exists x \forall y [y > x \rightarrow \exists z(z^2+ 5z = y)]\} $
+    \\
+    $\forall  x \neg  \forall y [y > x \rightarrow \exists z(z^2+ 5z = y)]\} $
+    \\
+    $\forall  x \exists y \neg [y > x \rightarrow \exists z(z^2+ 5z = y)]\} $
+    \\
+    $\forall  x \exists y \neg [y \leq x \lor \exists z(z^2+ 5z = y)]\}$
+    \\
+    $\forall  x \exists y [y > x \land \neg \exists z(z^2+ 5z = y)]\}$
+    \\
+    $\forall  x \exists y [y > x \land \forall z (z^2+ 5z \neq y)]\}$
+\end{enumerate}
+\subsection{2}
+Negate these statements and then re express the results as equivalent
+positive statements. (See Example 2.2.1.)
+
+(a) There is someone in the freshman class who doesn't have a roommate.
+
+(b) Everyone likes someone, but no one likes everyone
+
+(c) $\forall a \in A  \exists b \in B(a \in C \leftrightarrow b \in C)$.
+
+(d) $\forall y >  0 \exists x(ax^2 +bx +c = y)$.
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    $\exists x[F(x) \land \neg \exists y R(y,x)]$
+    \\
+    $\forall x \neg [F(x) \land \neg \exists y R(y,x)]$
+    \\
+    $\forall x[\neg F(x) \lor \exists y R(y,x)]$
+    \\
+    For all persons x, such that x is not in the freshman class or there exists someone y such that y is a roommate of x.
+    \item
+    L(a,b) a likes b
+    \\
+    $[\forall x \exists y L(x,y)\land \neg \exists a \forall b L(a,b)]$
+    \\
+    $\neg [\forall x \exists y L(x,y)\land \neg \exists a \forall b L(a,b)]$
+    \\
+    $[(\exists x \forall y \neg L(x,y))\lor (\exists a \forall b L(a,b))]$
+    \\
+    There exists an x such that for all y, x doesn't like y and there exists an a such that for all.
+    \item
+    $\forall a \in A  \exists b \in B(a \in C \leftrightarrow b \in C)$
+    \\
+    $\neg \forall a \in A  \exists b \in B(a \in C \leftrightarrow b \in C)$
+    \\
+    $\exists a \notin A  \exists b \in B(a \in C \leftrightarrow b \in C)$
+    \item
+    $\forall y >  0 \exists x(ax^2 +bx +c = y)$
+    \\
+    $\neg[\forall y >  0 \exists x(ax^2 +bx +c = y)]$
+    \\
+    $\exists y \leq 0 \forall x(ax^2 +bx +c \neq y)$
+\end{enumerate}
+\subsection{3}
+Are these statements true or false? The universe of discourse is N.
+
+$(a) \forall x(x < 7 \rightarrow \exists a \exists b \exists c(a^2+b^2+c^2 = x)).$
+
+$(b) \exists! x(x^2+ 3 = 4x).$
+
+$(c) \exists! x(x^2= 4x + 5).$
+
+$(d) \exists x \exists y(x^2 = 4x + 5 \land y^2 = 4y + 5).$
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    True 
+    \item
+    False
+    \item
+    True
+    \item
+    True
+\end{enumerate}
+\subsection{4}
+Show that the second quantifier negation law, which says that
+$\neg \forall xP(x)$ is equivalent to $\exists x\neg P(x)$, can be derived from the first,
+which says that $\neg \exists xP(x)$ is equivalent to $\forall x\neg P(x)$. (Hint: Use the
+double negation law.)
+
+
+$\neg \exists xP(x) \Leftrightarrow \forall x\neg P(x)$
+
+Replace P(x) with $\neg P(x)$
+
+$\neg \exists x \neg P(x) \Leftrightarrow \forall x\neg \neg P(x)$
+
+$\neg \exists x \neg P(x) \Leftrightarrow \forall x P(x)$ (Double Negation law)
+
+$\neg (\neg \exists x \neg P(x)) \Leftrightarrow \neg  (\forall x P(x))$
+
+$\exists x \neg P(x) \Leftrightarrow \neg \forall x P(x)$ (De Morgan's law, Double negation)
+\subsection{5}
+Show that $\neg \exists x \in A [P(x)]$ is equivalent to $\forall x \in A [\neg P(x)]$
+
+$\neg \exists x \in A [P(x)] \equiv \neg \exists x((x \in A )\land P(x))$ Logical form
+\\
+$\equiv \forall x \neg((x \in A)\land P(x))$ Negation of existential quantifier
+\\
+$\equiv \forall x(\neg (x \in A)\lor \neg P(x))$ De Morgans law
+\\
+$\equiv \forall x((x \in A)\rightarrow \neg P(x))$ Implication
+\\
+$\equiv \forall x \in A [\neg P(x)]$ 
+\subsection{6}
+Show that the existential quantifier distributes over disjunction. In
+other words, show that $\exists x(P(x) \lor Q(x))$ is equivalent to $\exists xP(x) \lor
+\exists xQ(x)$. (Hint: Use the fact, discussed in this section, that the
+universal quantifier distributes over conjunction.)
+
+I had to look for this hint at the end of the book: "Hint: Begin by showing that $\exists x(P(x) \lor Q(x))$ is equivalent to
+$\neg \forall x\neg (P(x) \lor Q(x)).$"
+
+$\exists x(P(x) \lor Q(x)) \Leftrightarrow \neg \neg (\exists x(P(x) \lor Q(x)))$ (Double Negation law)
+
+$\neg \neg (\exists x(P(x) \lor Q(x))) \Leftrightarrow \neg \forall x \neg (P(x) \lor Q(x))$(Quantifier Negation law)
+
+$\neg \forall x\neg (P(x) \lor Q(x)) \Leftrightarrow \neg [\forall x (\neg P(x) \land \neg Q(x))]$ (De Morgan's law)
+
+$\neg[ \forall x (\neg P(x) \land \neg Q(x)) ]\Leftrightarrow \neg[ \forall x \neg P(x) \land \forall x\neg Q(x))]$(Universal Quantifier distributes over conjunction)
+
+$\neg [\forall x \neg P(x) \land \forall x\neg Q(x) ]\Leftrightarrow \neg[ \neg \exists x P(x) \land \neg \exists Q(x)$(Quantifier Negation law)
+
+$\neg[ \neg \exists x P(x) \land \neg \exists Q(x) \Leftrightarrow \exists xP(x) \lor \exists xQ(x) $(Double Negation law)
+
+
+Therefor $\exists x(P(x) \lor Q(x)) \Leftrightarrow \exists xP(x) \lor \exists xQ(x)$
+\newpage
+\subsection{7}
+Show that $\exists x (P(x) \rightarrow Q(x))$ is equivalent to $\forall xP(x) \rightarrow \exists xQ(x)$.
+
+$\exists x(P(x) \rightarrow Q(x)) \equiv \exists x (\neg P(x) \lor Q(x))$  Implication
+
+$\exists x(\neg P(x) \lor Q(x)) \equiv \exists x \neg P(x) \lor \exists x Q(x)$ Existential Quantifier distributes over dis junction
+
+$\exists x\neg P(x) \lor \exists x Q(x) \equiv \neg \forall x P(x) \lor \exists x Q(x))$  Universal Quantifier Negation law
+
+$\neg \forall x P(x) \lor \exists x Q(x)) \equiv \forall x P(x) \rightarrow \exists x Q(x))$ Implication
+
+OR 
+
+$\forall x P(x) \rightarrow \exists x Q(x)$
+
+$\equiv \neg \forall x P(x) \lor \exists x Q(x)$ Implication
+
+$\equiv \exists x \neg P(x) \lor \exists x Q(x)$ Universal Quantifier negation
+
+$\equiv \exists x[\neg P(x) \lor Q(x)]$ Existential quantifies distributes over dis junction.
+
+$\equiv \exists x [P(x) \rightarrow Q(x)]$ Implication
+\subsection{8}
+Show that $(\forall x \in A \ P(x)) \land (\forall x \in B  \ P(x))$ is equivalent to $\forall x \in (A \cup B) P(x)$. (Hint: Start by writing out the meanings of the bounded
+quantifiers in terms of unbounded quantifiers.)
+
+$(\forall x \in A \ P(x)) \land (\forall x \in B  \ P(x))\Leftrightarrow \forall x (x\in A \rightarrow P(x)) \land \forall x (x\in B  \rightarrow P(x)) $ (Expanding abbreviation equivalence)
+
+$\forall x (x\in A \rightarrow P(x)) \land \forall x (x\in B  \rightarrow P(x)) \Leftrightarrow \forall x (\neg (x\in A) \lor P(x)) \land \forall x (\neg (x\in B)  \lor P(x))$
+
+$\forall x (\neg (x\in A) \lor P(x)) \land \forall x (\neg (x\in B)  \lor P(x)) \Leftrightarrow \forall x(P(x)\lor(\neg(x \in A)\land (\neg (x \in B))$
+
+$\forall x(P(x)\lor(\neg(x \in A)\land (\neg (x \in B)) \Leftrightarrow \forall x(P(x)\lor(x \notin A)\land (x \notin B))$ 
+
+$\forall x(P(x)\lor(x \notin A)\land (x \notin B)) \Leftrightarrow \forall x(P(x)\lor \neg[(x \in A)\lor (x \in B))]$
+
+$\forall x(P(x)\lor \neg[(x \in A)\lor (x \in B)] \Leftrightarrow  \forall x[(x \in A)\lor (x \in B)]\rightarrow P(X)$ (Conditional law)
+
+$\forall x[(x \in A)\lor (x \in B)]\rightarrow P(X) \Leftrightarrow \forall x \in (A \cup B) P(x)$ (Expanding abbreviation equivalence)
+\subsection{9}
+Is $\forall x(P(x) \lor Q(x))$ equivalent to $\forall xP(x) \lor \forall xQ(x)$? Explain. (Hint:
+Try assigning meanings to $P(x) and Q(x).$)
+
+I couldn't find a solution with equivalences:
+
+P(x)= Heads
+
+Q(x)= Tails
+
+The universe of discourse is coin toss:
+
+Therefore:
+$\forall x(P(x) \lor Q(x))\Leftrightarrow \forall xP(x) \lor \forall xQ(x)$
+
+Means: All coin toss are either Heads or Tails is equivalent to all coin toss are heads or all coin toss are tails.
+
+The first part is true(and also a tautology) the second part isn't true. 
+\subsection{10}
+(a)Show that the statement $\exists x \in A[P(x)] \lor \exists x \in B[P(x)]$ is equivalent to $\exists x \in (A \cup B)[P(x)]$
+\\
+(b) Is $\exists x \in A[P(x)] \land \exists x \in B[P(x)]$ equivalent to $\exists x \in (A \cap B)[P(x)]$? Explain.
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    Show that the statement $\exists x \in A[P(x)] \lor \exists x \in B[P(x)]$ is equivalent to $\exists x \in (A \cup B)[P(x)]$
+    \\
+    $\equiv \exists x [(x \in A) \land P(x)] \lor \exists x [(x \in B) \land P(x)]$ Logical Form
+    \\
+    $\equiv \exists x [(x \in A) \land P(x)]\lor [(x \in B)  \land P(x)]$ Existential quantifier distributes over dis junction
+    \\
+    $\equiv \exists x \{P(x) \land [(x \in A)\lor(x \in B)]\}$ Distributive laws
+    \\
+    $\equiv \exists x \{[(x \in A) \lor (x \in B)] \land P(x)\}$ Associative laws
+    \\
+    $\equiv \exists x \{[x \in (A \cup B)]\land P(x)\}$ Set form
+    \\
+    $\equiv \exists x \in (A \cup B)[P(x)]$ 
+    \item
+    It is not equivalent, since we can't distribute the existential quantifier.
+\end{enumerate}
+\subsection{11}
+Show that the statements $A \subseteq B$ and $A \setminus B = \emptyset$ are equivalent by writing each in logical symbols and then showing that the resulting formulas are equivalent.
+\\
+\\
+\underline{$A \subseteq B \equiv \forall x (x \in A \rightarrow x \in B)$} Logical Form
+\\
+$A \setminus B = \emptyset  \equiv \neg  \exists x (x \in A \land x \notin B)$ Logical Form
+\\
+$A \setminus B = \emptyset \equiv \forall x \neg(x \in A \land x \notin B)$Existence quantifier negation law
+\\
+$A \setminus B = \emptyset \equiv \forall x (\neg (x \in A) \lor x \in B)$ De Morgan's law
+\\
+\underline{$A \setminus B = \emptyset \equiv \forall x (x \in A \rightarrow x \in B)$} Implication
+\subsection{12}
+Show that the statements $C \subseteq A \cup B$ and $C \setminus A \subseteq B$ are equivalent by writing each in logical symbols and then showing that the resulting formulas are equivalent.
+
+$C \subseteq A \cup B \equiv \forall x(x \in C \rightarrow (A \cup B))$ Logical form
+
+\underline{$C \subseteq A \cup B \equiv \forall x(x \in C \rightarrow  x \in A \lor x \in B)$} Logical form
+
+$C \setminus A \subseteq B \equiv \forall x ((x \in C \land x \notin A) \rightarrow x \in B)$ Logical form
+
+$C \setminus A \subseteq B \equiv \forall x (\neg (x \in C \land x \notin A) \lor x \in B)$ Implication
+
+$C \setminus A \subseteq B \equiv \forall x (x \notin C \lor x \in A \lor x \in B)$ De morgan's law
+
+\underline{$C \setminus A \subseteq B \equiv \forall x (x \in C \rightarrow x \in A \lor x \in B)$} Implication
+\subsection{13}
+\begin{enumerate}
+    \item Show that the statements $A \subseteq $
+\end{enumerate}
+\subsection{14}
+Show that the statements $A \cap B = \emptyset \ and  \ A \setminus B = A$ are equivalent.
+
+I did it graphically. Discord
+
+\newpage
+\section{Exercises 2.3}
+\subsection{1}
+Analyze the logical forms of the following statements. You may use the symbols $\in, \notin, =, \neq , \land, \lor , \rightarrow, \leftrightarrow, \forall,$ and $\exists$ in your answers, but not $\subseteq, \nsubseteq, \mathscr{P} , \cap, \cup, \setminus, \{,\}$ or $\neg$. (Thus, you must write out the definitions of some set theory notation, and you must use equivalences to get rid of any occurrences of $\neg$.)
+
+(a)$\mathcal{F} \subseteq \mathscr{P}(A)$
+
+(b)$A \subseteq \{2n+1 | n \in \mathbb{N} \}$
+
+(c)$\{n2 + n +1 | n \mathbb{N}\}\subseteq \{ 2n+1 | n \in \mathbb{N}\}$
+
+(d)$\mathscr{P} (\bigcup_{i \in I} A_{i})\nsubseteq \bigcup_{i \in I} \mathbb{P}(A_{i})$
+
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    $\forall x(x\in \mathcal{F} \rightarrow \forall y (y \in x \rightarrow y \in A))$
+\end{enumerate}
+\subsection{3}
+\subsection{8}
+\subsection{12}
+\subsection{13}
+\subsection{15}
+\newpage
+\section{3.1}
+\subsection{1}
+Consider the following theorem. (This theorem was proven in the introduction)
+\\
+Theorem. Suppose n is an integer larger than 1 and n is not a prime.  Then $2^n - 1$ is not a prime.
+\\
+(a)Identify the hyphoteses and conclusion of the theorem. Are the hypotheses true when n = 6? What does the theorem tell you in this instance? Is it right?
+\\
+\textbf{Hyphotesis:
+n is an integer lager than 1 and n is not a prime. Yes they are true for n = 6; in this instance the theorem tells us that $2^n - 1 $ which is equal to 63 is not a prime.}
+\\
+(b) What can you conclude from the theorem in the case n = 15? Check directly that this conclusion is correct.
+\textbf{The theorem tells us that $2^n - 1$ is not a prime, $n=15, 2^n - 1 = 32767$ is divisible by 7 so the theorem stands correct}
+\\
+(c)What can you conclude from the theorem in the case n = 11?
+\textbf{We can't conclude anything, since n is a prime.} Or at least that's what I think, since it is an implication and the hyphotesis is false the conclusion can be either true or false.
+\subsection{3}
+Consider the following incorrect theorem. 
+\\
+\textbf{Incorrect Theorem.} Suppose n is a natural number lager than 2, and n is not a prime number. Then $2n + 13$ is not a prime number.
+\\
+What are the hyphotheses and conclusion of this theorem? Show that the theorem is incorrect by finding a counterexample.
+
+\textbf{Hyphoteses: $n \in \mathbb{N} > 2$ and n is not a Prime.}
+
+\textbf{Conclusion: $2n + 13$ is not a prime.}
+
+\textbf{Counterexample: n=8, $2(8)+13 = 29$, 29 is a prime number}
+\subsection{5}
+Suppose a and b are real numbers. Prove that if $a < b < 0$ then $ a^2 > b^2$
+
+Suppose a and b are real numbers, and $a < b< 0$; multiplying $a<b$ times a  we get $a^2> ab$, multiplying $a <b$ times b we get $ab>b^2$. As a result we have $a^2> ab >b^2$ therefore $a^2 > b^2$
+
+
+\subsubsection{8}
+Suppose $A \setminus B \subseteq C \cap D$ and $x \in A$. Prove that if $x \notin D$ then $x \in B$.
+\\
+\textbf{Proof by Implication.} Assume $x \notin D$, by the logical definition of subset it follows that if $x \in (A \setminus B)$ then $x \in (C \cap D)$. Since  $x \notin D$, it follows that $x \notin(C \cap D)$, therefore  by the definition of the implication and difference of sets x must be either not in A or x must be in B . We already know that x is in A, therefore  x in B.
+
+
+
+either  $x \notin A$ or $ x \in B$ or $x \in C$ and $x \in D$ since $x\notin D$ and $x \in A$ then x must be in B ($x \in B$). In conclusion if $x \notin D$, then $x \in B$.
+
+\subsection{14}
+Suppose x and y are real numbers.Prove that if $x^2 + y = -3 $ and $2x -y = 2$ then $x = -1$.
+
+\textbf{Proof by implication.}
+Suppose $x^2 + y = -3 $ and $2x -y = 2$ are true, then it follows that $y= -x^2 -3$ substituting this in $2x -y = 2$ we get $x^2 + 2x +1 = 0$, solving the equation for x results in $x= -1$
+\subsection{15}
+Prove the first theorem in Example 3.1.1.
+\\
+\textbf{Theorem. }Suppose $x>3$ and $y<2$. Then $x^2-2y>5$.
+\\
+(Hint: You might find it useful to apply the theorem from Example 3.1.2.)
+\\
+
+\textbf{Proof by implication.}
+Suppose $x>3$ and $y<2$, thanks to theorem 3.1.2 we know that $x^2>9$; following the rules of inequalities we know as well that  $-2y >-4$; adding these two inequalities results in $x^2-2y>5$, that which proves the theorem.
+\subsection{16}
+Consider the following theorem:
+
+\textbf{Theorem.} Suppose x is a real number and  $x \neq 4 $. If $(2x-5)/(x-4)= 3$ then $x = 7$.
+\\
+(a) What's wrong with the following proof of the theorem?
+Proof. Suppose $x = 7$. Then. $(2x-5)(x-4)=(2(7)-5)/(7-4)= 9/3=3$. Therefore if $(2x-5)/(x-4)= 3 $ then $x = 7$. 
+\textbf{It is wrong since it is just proving one specific case, when we want to know that the theorem is true for all real numbers}
+\\
+(b) Give a correct proof of the theorem.
+\\
+\textbf{Proof by implication.} Suppose $(2x-5)/(x-4)= 3$, it follows that $2x-5=3(x-4)$ solving for x this equation results in $x=7$, which proves the theorem.
+\newpage
+
+\subsection{17}
+Consider the following incorrect theorem:
+\\
+\textbf{Incorrect Theorem.}Suppose that x and y are real numbers and $x \neq 3$. If $x^2 y = 9y$ then $y = 0$
+\\
+(a) What's wrong with the following proof of the theorem? 
+\\
+\textit{Proof.} Suppose that  $x^2 y = 9y$. Then $(x^2-9)y=0$. Since $x \neq 3$, $x^2 \neq 9$, so $x^2-9 \neq 0$. Therefore we can divide both sides of the equation $(x^2-9)y = 0$ by $x^2-9$, which leads to the conclusion that $y=0$. Thus, if $x^2y=9y$ then $y=0$.
+\\
+\textbf{We can not assume that $x^2 \neq 9$ based on the fact that $x \neq 3 $, since $x=-3$ can give you $x^2 = 9$ }
+\\
+(b) Show that the theorem is incorrect by finding a counterexample.
+\\
+\textbf{Proof by counterexample.} Let $x=-3$ and $y=1$, hence  $x^2 y=(-3)^2 (1)=9$ and $9(y)=9$.The hypothesis of the theorem is true but the conclusion is false, therefore the theorem is incorrect.
+\section{3.2}
+\subsection{1}
+This problem could be solved by using truth tables, but don't do it that way. Instead, use the methods for writting proofs discussed so fair in this chapter.(See Example 3.2.4.)
+\\
+(a)Suppose $P \rightarrow Q$ and $Q \rightarrow R$ are both true. Prove that $P \rightarrow R$ is true.
+(b)Suppose $\neg R \rightarrow (P \rightarrow \neg Q )$ is true. Prove that $P \rightarrow (Q \rightarrow R)$ is true.
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    Suppose P, since $P \rightarrow Q$ and $Q \rightarrow R$ it follows that R. Therefore if $P \rightarrow Q$ and $Q \rightarrow R$ then $P \rightarrow R$.
+    \item
+    Suppose P, to prove $Q \rightarrow R$ we will use the contra positive $\neg R \rightarrow \neg Q$, suppose $\neg R$ then it follows that  $P \rightarrow \neg Q$ since we know P we conclude $\neg Q$. Therefore if $\neg R \rightarrow (P \rightarrow \neg Q )$ then $P \rightarrow (Q \rightarrow R)$ is true.
+\end{enumerate}
+\subsection{2}
+This problem could be solved by using truth tables, but don't do it that way. Instead, use the methods for writing proofs discussed so far in the chapter (See Example 3.2.4)
+\\
+(a)Suppose $P \rightarrow Q$ and $R \rightarrow \neg Q$ are both true.Prove that if $p \rightarrow \neg R$ is true.
+(b)Suppose that P is true. Prove that  $Q \rightarrow \neg (Q \rightarrow \neg P)$ is true.
+
+\begin{enumerate}[label=(\alph*)]
+    \item 
+    Suppose P, since $P \rightarrow Q$ it follows that Q. Taking the contra positive of $R \rightarrow neg Q$ which is $Q \rightarrow \neg R$ and using Q we conclude that $\neg R$. Therefore if P then $\neg R$.
+    \item
+    Suppose Q. Using the definition of implication and De Morgan's law we know that $\neg (Q \rightarrow \neg P)$ is equivalent to Q and P. We already know Q and P. Therefore if Q then $\neg(Q \rightarrow \neg P)$.
+\end{enumerate}
+\subsection{3}
+Suppose $A \subseteq C$, and B and C are disjoint. Prove that $P \rightarrow \neg R$ is true.
+
+Suppose $x \in A$, since $A \subseteq C$ then $x \in C$. Knowing that B and C are disjoint we can conclude that $x \notin B$.
+\subsection{4}
+Suppose that $A \setminus B$ is disjoint from C and $x \in A$. Prove that if $x \in C$ then $x\in B$.
+\subsection{5}
+Prove that it cannot be the case that $x\in A \setminus B$ and $x \in B  \setminus C$
+
+Suppose $x \in A \setminus B$ and $x \in B \setminus C$. $x \in A \setminus B$ means that x is in A and not in B, on the other hand $x \in B \setminus C$ means that x is in B and not in C. But it cannot be the case that x is in B and not in B at the same time; it is a contradiction.
+
+\subsection{6}
+Use the method of proof by contradiction to prove the theorem in Example 3.2.1
+\\
+\textbf{Theorem (Example 3.2.1)} Suppose $A \cap C \subseteq B$ and $a \in C$. Prove that $a \notin A \setminus B$.
+\\
+Suppose $a \in (A \setminus B)$ which means $a \in A$ and $a \notin B$. Since we know $a \in C$ we conclude $a \in A \cap C$, and from the statement $A \cap C \subseteq B$ we conclude $a \in B$. But $a \in B$ contradicts our first assumption $a\in (A \setminus B)$ where $a \notin B$. Therefore it cannot be the case that  $a \in (A \setminus B)$, so $a \notin (A \setminus B)$.
+\subsection{7}
+Use the method of proof by contradiction to prove the theorem  in Example 3.2.5
+\textbf{Theorem (Example 3.2.5)} Suppose that $A \subseteq B$, $a \in A$ and $a \notin B \setminus C$. Prove that $a \in C$.
+
+Suppose $a \notin C$. Since $a\in A$ and $A \subseteq B$ we conclude $a \in B$. But $a \in B$ and $a \notin C$ contradict the fact that $a \notin B \setminus C$ which is logically equivalent to $a \notin B$ or $a \in C$. Therefore it cannot be the case that  $a \notin C$, so $a \in C$. 
+\subsection{8}
+Suppose that $y+x=2y-x$, and x and y are not both zero. Prove that $y \neq 0$.
+
+Suppose y=0. It follows that $2x=y$ is $2x=0$ making x also 0. This contradicts the fact that x and y are not both zero. Thus it cannot be the case that y=0, so $y\neq 0$.
+\subsection{9}
+Suppose that a and b are nonzero real numbers. Prove that if $a<1/a<b<1/b$ then $a<-1$.
+
+Suppose $a<1/a<b<1/b$. Suppose $a\geq 1$, but according to our first assumption that cannot be, this a<1. Suppose $a \geq 0$, but that cannot be, since there exists a counter example a=0, thus a<0. Multiplying the inequality by a which is a negative real number results in $a^2 >1$, which in turn means that $a<-1$. Therefore if  $a<1/a<b<1/b$ then $a<-1$.
+\subsection{10}
+Suppose that x and y are real numbers. Prove that if $x^2 y=2x + y$, then if $y \neq 0$ then $x \neq 0$.
+
+Suppose $x^2 y=2x + y$ and $y \neq 0$. Since $x^2 y=2x + y$ is equivalent to $y=2x/(x^2-1)$. Now suppose x=0 then y=0, but this contradicts the fact that $y \neq 0$, thus $x \neq 0$.
+
+\subsection{11}
+Suppose that x and y are real numbers. Prove that if  $x \neq 0$, then if  $y= (3x^2 + 2y )/(x^2 + 2)$ then $y = 3$.
+
+Suppose $x \neq 0$ and $y= (3x^2 + 2y )/(x^2 + 2)$. Multiplying $y= (3x^2 + 2y )/(x^2 + 2)$ by $x^2 +2$ it results in $y(x^2 +2)=3x^2+2$ subtracting 2y on both sides results in $x^2(y-3)=0$. Since $x\neq 0$, $x^2\neq 0$ using this fact we can divide $x^2(y-3)=0$ by $x^2$ on both sides which results in $y=3$. Therefore if $x \neq 0$, then if  $y= (3x^2 + 2y )/(x^2 + 2)$ then $y = 3$.
+\subsection{12}
+Consider the following incorrect theorem:
+\\
+\textbf{Incorrect Theorem.} Suppose x and y are real numbers and $x+y=10$. Then $x \neq 3$ and $y \neq 8$
+\\
+(a) What's wrong withe the following proof of the theorem?
+\\
+\textit{Proof}. Suppose the conclusion of the theorem is false. Then $x = 3$ and $y = 8$. But then $x+y =11$, which contradicts the given information that $x+y=10$. Therefore the conclusion must be true.
+\\
+\textbf{When you say that the conclusion is false it means $x=3$ or $y=8$, not $x=3$ and $y=8$}
+\\
+(b) Show that the theorem is incorrect by finding a counterexample 
+$x=3$ and $y=7$ results in x+y=10 
+\newpage
+\subsection{13}
+ Consider the following incorrect theorem:
+\\
+\textbf{Incorrect Theorem.} Suppose that $A\subseteq C, B \subseteq C$, and $x \in A$. Then $x\in B$.
+\\
+(a) What's wrong withe the following proof of the theorem?
+\\
+\textit{Proof.} Suppose that $x \notin B $. Since  $x \in A$ and $A \subseteq C, x \in C$. Since $x \notin B$ and $B \subseteq C,x \notin C$. But now we have proven both $x \in C$ and $x \notin C$, so we have reached a contradiction. Therefore $x \in B$.
+\\
+\textbf{This part is incorrect "Since $x \notin B$ and $B \subseteq C,x \notin C$" because even though $x \notin B$ that does not imply that $x \notin C$.}
+\\
+(b) Show that the theorem is incorrect by finding a counterexample \\
+\textbf{$a=\{1,2\}, b=\{3\} ,c=\{1,2,3\}$. For instance take $x=2$ using $A \subseteq C$ we know $x\in C$. 2 in A but 2 not in B.}
+\section{3.3}
+\subsection{1}
+In exercise 7 of Section 2.2 you used logical equivalences to show that $\exists x(P(x)  \rightarrow Q(x))$ is equivalent to $\forall x P(x) \rightarrow \exists x   Q (x)$. Now use the methods of this section to prove that if $\exists x(P(x)\rightarrow Q(x))$ is true, then $\forall x P(x) \rightarrow \exists x Q(x)$ is true.(Note: The other direction of the equivalence is quite a bit harder to prove. See exercise 30 of Section 3.5.)
+
+\begin{proof}
+Suppose $\exists x(P(x)\rightarrow Q(x))$. Then we can chose a particular $x_{0}$ such that  $P(x_{0})\rightarrow Q(x_{0})$. Now suppose that $\forall x P(x)$. Then in particular, $P(x_{0})$ and since $P(x_{0})\rightarrow Q(x_{0})$, it follows that $Q(x_{0})$. Since we have found a particular value of x for which Q(x) holds, we can conclude that $\exists x Q(x)$. Thus if $\exists x(P(x)\rightarrow Q(x))$ is true, then $\forall x P(x) \rightarrow \exists x Q(x)$ is true.
+\end{proof}
+
+\subsection{2}
+Prove that if A and $B \setminus C $ are disjoint, then $A \cap B \subseteq C$.
+\begin{proof}
+Suppose  A and $B \setminus C $ are disjoint. Let x be an arbitrary element, now suppose for the purpose of obtaining a contradiction that $x \in A \cap B$ and $x \notin C$. It follows that $x\in A$, $x \in B$, and $x \notin C$; this cannot be since A and $B \setminus C $ are disjoint. Therefore $x\in C$ and thus $A \cap B \subseteq C$.
+\end{proof}
+\subsection{5}
+The hypothesis of the theorem proven in Exercise 4 is $A \subseteq \mathscr{P}(A)$.
+\\
+(a)Can you think of a set A for which this hypothesis is true?
+
+$A=\{\emptyset \}$ and $\mathscr{P}(A)=\{\emptyset,\{\emptyset \}\}$
+\\ 
+(b)Can you think of another?
+
+
+A=$\emptyset$ and $\mathscr{P}(A)=\{\emptyset \}$
+\subsection{7}
+Prove that for every real number x, if $x>2$ then there is a real number y such that  $y+1/y=x$
+ 
+\begin{proof} Let x be an arbitrary real number, and suppose $x>2$. Let $y=(x+ \sqrt{x^2-4})/2$ which is defined since $x>2$. Then $y+1/y=[(x+ \sqrt{x^2-4})/2] +[2/(x+ \sqrt{x^2-4})]$ which is equal to x. Therefore if $x>2$ then there is a real number y such that  $y+1/y=x$.
+\end{proof}
+\newpage
+\subsection{15}
+Suppose that $\{ A_{i} | i\in I\}$ is an indexed family of sets and $I \neq \emptyset$.  Prove that $\bigcap_{i\in I}A_{i} \in \bigcap_{i \in I} \mathscr{P}(A_i)$
+\begin{proof}Since $I \neq \emptyset$, suppose j is an arbitrary element of I in other words $j \in I$; therefore $\bigcap_{i \in I}A_{i}\subseteq A_{j}$, it follows that $\bigcap_{i \in I}A_{i}\in \mathscr{P}(A_{j})$. Using the definition of the intersection and the assumption that $j \in I$ we conclude that $\bigcap_{i \in I}A_{i}\in \bigcap_{j\in I}\mathscr{P}(A_{j})$.
+\end{proof}
+\subsection{18}
+In this problem all variables range over $\mathbf{Z}$, the set of all integers.
+
+(a)Prove that if $a|b$ and $a|c$,then $a|(b+c)$
+\begin{proof}
+Let a, b, and c be arbitrary integers and suppose $a|b$ and $a|c$. It follows that $b=xa$ and $c=ya$ where x and y are some integers. Defining z as an arbitrary integer such that $z=x+y$ and then adding b and c results in $b+c=za$, therefore it is clear that  $a|(b+c)$. 
+\end{proof}
+
+(b)Prove that if $ac|bc$ and $c\neq 0$, then $a|b$.
+\begin{proof}
+Let a, b, and c are arbitrary integers and suppose $ac|bc$ and $c\neq 0$. It follows that $bc=zac$ where z is some integer, since $c\neq0$ we can divide this equality by c which results in  $b=za$ or in other words $a|b$. 
+\end{proof}
+\subsection{19}
+
+(a)Prove that for all real numbers x and y there is a real number z such that $x +z = y-z$.
+
+\begin{proof}
+Let x and y be arbitrary real numbers, and define a real number z such that $z=(y-x)/2$. We see that $x+z = x+(y-x)/2=(x+y)/2$. Multiplying both sides by 2, we obtain $2x+2z=x+y$. Adding $-(z+x)$ on both sides, results in $x+z=y-z$.
+\end{proof}
+
+(b)Would the statement in part (a) be correct if "real number" were changed to integer? Justify your answer.
+
+\textbf{No, it won't work for integers; the above proof (exercise 19) would only work if (y-x)/2 results in an integer number so only certain cases. Specifically when the expression y-x is equal to an even number.}
+\subsection{20}
+Consider the following theorem:
+
+\textbf{Theorem.}\textit{For every real number x, $x^2\geq 0$}.
+
+What's wrong with the following proof of the theorem?
+
+\begin{proof}
+Suppose not. Then for every real number $x$, $x^2<0$. In particular, plugging in $x + 3$ we would get $9<0$, which is clearly false. This contradiction shows that for every number $x$, $x^2 \geq 0$. 
+\end{proof} 
+
+\textbf{The problem here is that the negation of "for every real number $x$, $x^2\geq 0$" is wrong since $\neg \exists x (x^2\geq 0) \equiv \forall x (x^2<0)$ and not $\exists x (x^2<0)$}
+\subsection{21}
+
+\subsection{22}
+\subsection{23}
+\subsection{24}
+\subsection{25}
+\subsection{26}
+\newpage
+\section{3.4}
+\subsection{1}
+Use the methods of this chapter to prove that $\forall x (P(x)\land Q (x))$ is equivalent to $\forall x P (x) \land \forall x Q (x)$.
+\begin{proof} $ $ \\
+($\rightarrow$) Let $y$ be arbitrary and suppose $\forall x(P(x)\land Q(x))$. It follows that $P(y) \land Q(y)$, and so in particular $P(y)$. Since $y$ is arbitrary we conclude $\forall x P(x)$. A similar argument proves $\forall x Q(x)$.
+$ $ \\
+($\leftarrow$) Let y be arbitrary and suppose $\forall x P(x) \land \forall x Q(x)$. Let $y$ be arbitrary. Then $P(y)\land Q(y)$ and since $y$ is arbitrary we conclude $\forall x (P(x)\land Q(x))$.
+\end{proof}
+\subsection{2}
+Prove that if $A \subseteq B$ and $A \subseteq C$ then $A \subseteq B \cap C$.
+
+\begin{proof}
+Suppose $A \subseteq B$, $A \subseteq C$, and $x \in A$. It is clear that $x \in B$ and $x \in C$, therefore $x \in B \cap C$. Since $x$ was an arbitrary element of A, we can conclude that $A \subseteq B \cap C$.
+\end{proof}
+\subsection{8}
+Prove that $A \subseteq B$ iff $\mathscr{P}(A)\subseteq \mathscr{P}(B)$.
+\begin{proof}$ $ \\
+$(\rightarrow)$ Suppose $x \in \mathscr{P}(A)$ then it follows that $x \subseteq A$. Since $A \subseteq B$, it follows that $x \subseteq B$. We conclude $x \in \mathscr{P}(B)$. Therefore $\mathscr{P}(A)\subseteq \mathscr{P}(B)$.
+$ $ \\
+$(\leftarrow)$ Suppose $x \in A$ and there is some set $y \in \mathscr{P}(A)$ such that $x \in y$. Using the fact that $\mathscr{P}(A)\subseteq \mathscr{P}(B)$ we can conclude $y \in \mathscr{P}(B)$. Since $x \in y$ we conclude $x \in B$.
+\end{proof}
+\subsection{10}
+Prove that if $x$ and $y$ are odd integers, then $x-y$ is even.
+\begin{proof}
+Suppose $x$ and $y$ are odd integers, it follows that $x = 2j + 1$ and $y = 2i + 1$, where $i$ and $j$ are some integers. Therefore $x-y$ is equal to $2j+1-(2i+1) = 2j+1-2i+1 = 2j-2i = 2(j-i)$. Where $j-i$ is some integer. It is then clear that $x-y$ is even.
+\end{proof}
+\subsection{11}
+Prove that for every integer $n$, $n^3$ is even iff $n$ is even.
+\begin{proof}$ $\\
+$(\rightarrow)$ \textbf{Contrapositive} Let $n$ be an arbitrary odd integer. It follows that $n=2a+1$, where $a$ is some integer.Therefore $n^3$ is equal to $8a^3 + 12a^2 + 6a +1 = 2(4a^3 + 6a^2 +3a) + 1$ which is an odd number.
+$ $\\
+$(\leftarrow)$Let n  be an arbitrary even integer. It follows that $n=2a$, where $a$ is some integer. Therefore $n^3$ is equal to $8a^3 = 2(4a^3)$, so $n^3$ is even.
+\end{proof}
+
+\newpage
+\subsection{12}
+Consider the following putative theorem.
+
+\textbf{Theorem?}Suppose $m$ is and even integer and $n$ is an odd integer. Then $n^2 -m^2 = n+m$.
+\\
+(a)What's wrong with the following proof of the theorem?
+
+\begin{proof}
+Since $m$ is even, we can choose some integer $k$ such that  $m=2k$. Similarly, since $n$ is odd we have $n=2k+1$.Therefore 
+$n^2-m^2=(2k+1)^2-(2k)^2=4k^2+4k+1-4k^2=4k+1=(2k+1)+(2k)=n+m$.
+\end{proof}
+
+\textbf{The problem is that the definition of $m$ and $n$ both use a variable $k$. Therefore we are assuming that his $k$ is the same in both definitions; which is not an assumption we can make with the information we have}
+\\
+(b)Is the theorem correct? Justify your answer with either a proof or a counterexample.
+
+\textbf{No, counterexample m=2 n=5 which means $n^2-m^2=-21$ and $n+m=7$, $ 7\neq -21$}
+\subsection{26}
+Prove that for all integers $a$ and $b$ there is an integer $c$ such that $a|c$ and $b|c$.
+\begin{proof}
+Let $a$ and $b$ be arbitrary integers and suppose there is an integer $c$ such that $c=ab$. It follows that $a|c$ and $b|c$.
+\end{proof}
+
+\textbf{Apparently there are many proofs for this one. For instance, you can say that a is a multiple of b and then set c=b.}
+\subsection{27}
+(a)Prove that for every integer $n$, $15|n$ iff $3|n$ and $5|n$.
+\begin{proof}$ $ \\
+$(\rightarrow)$ Let $n$ be an arbitrary integer, and suppose $15|n$. Then it is clear that $n=15a$, where $a$ is some integer. It follows that $n=3[5(a)]$, therefore $3|n$ and $5|n$.
+
+$ $\\
+$(\leftarrow)$Let $n$ be and arbitrary integer and suppose $3|n$ and $5|n$. Therefore $n=3a$ and $n=5b$, where $a$ and $b$ are some integers. From this we can conclude $3a=5b$; now suppose for the sake of getting a contradiction that 3 does not divides $b$ then $b=3c+1$, where $c$ is some integer. It follows that $3a=5(3c+1)$ and therefore $5=3(a-5c)$. This suggest that 5 is divisible by 3 which is clearly not true, therefore 3 divides b. Since $3|b$ we can say that $b=3c$, where c is some integer. It follows that $n=5(3c)$ in other words $n=15c$ which means that if $3|n$ and $5|n$ then $15|n$.
+\end{proof}
+
+(b)Prove that it is not true that for every integer $n$, $60|n$ iff $6|n$ and $10|n$.
+
+\textbf{Suppose $n=30$, $6|n$ and $10|n$. Then $6|30$ and $10|30$ but not $60|30$. }
+
+\section{3.5}
+\subsection{1}
+Suppose A, B, and C are sets. Prove that $A \cap (B \cup C) \subseteq (A \cap B)\cup C$. $ $
+ \\
+Suppose $A\cap (B \cup C)$ and let x be an arbitrary element of this set. Then $x\in A$ and either $x \in B $ or $x \in C $.
+Case 1. $x \in B$. Since $x \in A $ and $x \in B$, $x \in (A \cap B) \cup C$ $ $\\
+Case 2. $x \in C$. Then $x \in (A \cap B) \cup C$ $ $\\
+Since we know that either $x \in B $ or $x \in C$, these cases cover all the possiblities, so we can conclude that $x \in (A \cap B ) \cup C$. Since $x$ was an arbitrary element of $A \cap (B \cup C)$, this means that $A\cap (B \cup C) \subseteq (A \cap B) \cup C$.
+\subsection{5}
+Suppose $A\cap C \subseteq B \cap C$ and $A \cup C \subseteq B \cup C$. Prove that $A \subseteq B$. $ $\\
+Suppose  $x \in A$. There are 2 cases. $ $ \\
+Case 1. $x \in C$. Then $x \in A$ and $x \in C$. Using $A \cap C \subseteq B \cap C$ we can conclude that $x \in B$ and $x \in C$. $ $ \\
+Case 2. $x \notin C$. Then $x \in A$ and $x \notin C$. Using $A \cup C \subseteq B \cup C$ we can conclude that $x \in B$, since $x \notin C$.
+$ $ \\
+Since we know that either $x \in C$ or $x \notin C$, these cases cover all the possibilities, so we can conclude that if $x \in A$ then $x \in B$. And since $x$ was arbitrary we can say that $A \subseteq B$
+\subsection{8}
+Prove that for any sets $A$ and $B$, $\mathscr{P}(A) \cup \mathscr{P}(B) \subseteq \mathscr{P}(A \cup B)$. $ $ \\
+Suppose $\mathscr{P}(A)\cup \mathscr{P}(B)$, and let $x$ be an arbitrary element of $\mathscr{P}(A)\cup \mathscr{P}(B)$. Then either $x \in \mathscr{P}(A)$ or $x \in \mathscr{P}(B)$. $ $ \\
+Case 1. $x \in \mathscr{P}(A)$. So $x \subseteq A$. It is clear that $x$ is also in $\mathscr{P}(A \cup B)$, since $x \subseteq A \cup B$.
+$ $\\
+Case 2. $x \in \mathscr{P}(B)$. So $x \subseteq B$. It is then clear that $x$ is also in $\mathscr{P}(A \cup B)$, since $x \subseteq A \cup B$.
+$ $\\
+Since $x \subseteq A \cup B$ in either case $x$ was an arbitrary element of $\mathscr{P }(A)\cup \mathscr{P}(B)$, therefore we can conclude that $\mathscr{P}(A)\cup \mathscr{P}(B)$, therefore we can conclude that $\mathscr{P}(A) \cup \mathscr{P}(B)\subseteq \mathscr{P}(A \cup B)$.
+\subsection{10}
+Suppose $x$ and $y$ are real numbers and $x \neq 0$. Prove that $y + 1/x = 1 + y/x$ iff either $x =1$ or $y=1$. $ $\\
+$(\leftarrow)$
+We consider two cases. $ $ \\
+Case 1. $x = 1$. Writing the expression $y + 1/x$, and using the fact that $x = 1$; we can conclude that $y + 1/x = y/x + x/x = y + 1$. 
+$ $\\
+Case 2. $y = 1$. Writing the expression $y + 1/x$, since $y = 1$; we conclude $y + 1/x = 1 + y/x$.
+$ $\\
+$(\rightarrow)$
+Suppose $y + 1/x = 1 + y/x$. If $x = 1$, then of course $x = 1$ or $y = 1$. Now suppose $x \neq 1$. Then solving $y + 1/x = 1+y/x$ for $y$ results in $y(x-1)=x-1$ dividing both sides by $x-1$ we get $y=1$.
+\subsection{13}
+(a)Prove that for all real numbers $a$ and $b$, $|a|\leq b$ iff $-b \leq a \leq b$. $ $\\
+($\rightarrow$) We consider two cases.
+$ $\\
+Case 1. $a \geq 0$. Then $|a|=a$, so we have $a \leq b$. Now multiplying this inequality by $-1$ results in $-a \geq -b$; but since we know $a$ is a positive number we conclude $-b \leq a$. Therefore $-b \leq a \leq b$. $ $ \\
+Case 2. $a < 0$. Then $|a|=-a$, so we have $-a \leq b$, multiplying both sides by $-1$ results in $a \geq -b$ or $ -b \leq a$. We can also conclude that $a \leq b$; because $a < -a$, since a is a negative number; and it follows that $-b \leq a < -a \leq b$. Therefore  $-b \leq a \leq b$.
+$ $ \\
+$(\leftarrow)$ Suppose $-b \leq a \leq b$.
+$ $\\
+We have two possible cases.
+$ $\\
+Case 1. $a \geq 0$. It follows that $|a|=a$. Since $a \leq b$ we conclude $|a|\leq b$.
+$ $\\
+Case 2. $a < 0$. It follows that $|a|= -a$. Since $-b \geq a$ or in other words $-a  \leq b$ we conclude $|a| \leq b$.
+\newpage
+\subsection{27}
+Consider the following putative theorem.
+$ $\\
+\textbf{Theorem?}\textit{For every real number $x$, if $|x-3|<3$ then $0<x<6$.}
+$ $ \\
+Is the following proof correct? If so, what proof strategies does it use? If not, can it be fixed? Is the theorem correct?
+\begin{proof}
+Let $x$ be an arbitrary real number, and suppose $|x-3|<3$. We consider two cases: $ $\\
+Case 1. $x-3 \geq 0$. Then $|x-3| = x-3$. Plugging this into the assumption that $|x-3|<3$, we get $x-3<3$, so clearly $x<6$. $ $\\
+Case 2. $x-3 <0$. Then $|x-3|=3-x$, so the assumption $|x-3|<3$ means that $3-x < 3$. Therefore $3 < 3 +x$, so $0 <x $.
+$ $\\
+Since we have proven both $0<x$ and $x <6$, we can conclude that $0<x<6$.
+\end{proof}
+ \textbf{It is incorrect since you need to conclude $0<x<6$ in each case. It can be fixed.}
+\subsection{28}
+Consider the following putative theorem.
+$ $\\
+\textbf{Theorem?}\textit{For any sets A, B, and C, if $A \setminus B \subseteq C$ and $A \nsubseteq C$ then $A \cap B \neq \emptyset$}
+$ $ \\
+Is the following proof correct? If so, what proof strategies does it use? If not, can it be fixed? Is the theorem correct?
+\begin{proof}
+Suppose $A \setminus B \subseteq C$ and $A \nsubseteq C$. Since $A \nsubseteq C$, we can choose some $x$ such that $x \in A$ and $x \notin C$. Since $x \notin C$ and $A \setminus B \subseteq C$, $x \notin A \setminus B$. Therefore either $x \notin A$ or $x \in B$. But we already know that $x \in A$, so it follows that $x \in B$. Since $x \in A$ and $x \in B$, $x \in A \cap B$. Therefore $A \cap B \neq \emptyset$.
+\end{proof}
+\textbf{It is correct. It uses the fact that one of the elements in the disjunction is false to prove that the other one must be true.}
+\subsection{29}
+Consider the following putative theorem.
+$ $\\
+\textbf{Theorem?}\textit{$\forall x \in \mathbb{R} \exists y \in  \mathbb{R} (xy^2 \neq y-x)$.}
+$ $ \\
+Is the following proof correct? If so, what proof strategies does it use? If not, can it be fixed? Is the theorem correct?
+
+\begin{proof}
+Let $x$ be an arbitrary real number. $ $\\
+Case 1. $x = 0$. Let $y=1$. Then $xy^2 =0$ and $y-x=1-0=1$, so $xy^2 \neq y-x$. $ $\\
+Case 2. $x \neq 0$. Let $y=0$. Then $xy^2 = 0$ and $y-x=-x \neq 0$, so $xy^2 \neq y-x$.
+$ $\\
+Since these cases are exhaustive, we have shown that $\exists y \in \mathbb{R}(xy^2 \neq y-x)$. Since $x$ was arbitrary, this shows that $\forall x \in \mathbb{R} \exists y \in  \mathbb{R} (xy^2 \neq y-x)$.
+\end{proof}
+\textbf{It is correct. It uses exhausting all the possible cases.}
+\newpage
+\subsection{31}
+Consider the following putative theorem.
+$ $\\
+\textbf{Theorem?}\textit{Suppose A, B, and C are sets and $A \subseteq B \cup C$. Then either $A \subseteq B$ or $A \subseteq C$.}
+$ $ \\
+Is the following proof correct? If so, what proof strategies does it use? If not, can it be fixed? Is the theorem correct?
+\begin{proof}
+Let $x$ be an arbitrary element of A. Since $A \subseteq B \cup C$. Then either $A \subseteq B$ or $A \subseteq C$. $ $\\
+Case 1. $x \in B$. Since $x$ was an arbitrary element of A, it follows that $\forall x \in A (x \in B)$, which means that $A \subseteq B$. $ $\\
+Case 2. $x \in C$. Similarly, since $x$ was an arbitrary element of A, we can conclude that $A \subseteq C$.
+$ $\\
+Thus, either $A \subseteq B$ or $A \subseteq C$.
+\end{proof}
+\textbf{It is incorrect since you need to prove $A \subseteq B$ or $A \subseteq C$ in each case; and also it is using the conclusion of the theorem instead of the fact that $A \subseteq B \cup C$. It can not be fixed, the theorem is incorrect.
+$ $\\
+Keep in mind counter examples and how the actual thing behaves, when proving this kind of things. Very important.}
+\section{3.6}
+\subsection{1}
+Prove that for every real number $x$ there is a unique real number $y$ such that $x^2y=x-y$.
+\begin{proof}
+Let $x$ be an arbitrary real number and let $y=x/(x^2+1)$. Then $x-y=x - x/(x^2+1)= x^3/(x^2+1)=x^2 \cdot x/(x^2+1)=x^2y$. And to prove that it is unique we suppose that $x^2z=x-z$. Then $z(x^2+1)=x$, and since $x^2+1 \neq 0$, we can divide both sides by $x^2+1$ to conclude that $z = x/(x^2+1) = y$
+\end{proof}
+\subsection{6}
+Let $U$ be any set.$ $\\
+(a)Prove that there is a unique $A \in \mathscr{P}(U)$ such that for every $B \in \mathscr{P}(U), A \cup B = B$ $ $\\
+\begin{proof}
+Let $A=\emptyset$, then $A \in \mathscr{P}(U)$. It follows that for any set $b \in \mathscr{P}(U), A \cup B = B$ since $\emptyset \cup B = B$.$ $\\
+To prove uniqueness suppose that $Z \in \mathscr{P}(U)$ and for all $B \in \mathscr{P}(U), Z \cup B = B$. Then in particular, suing $B = \emptyset$, we can conclude that $Z \cup \emptyset = \emptyset$. But clearly $Z \cup \emptyset = Z$ so $Z= \emptyset$
+\end{proof}
+(b)Prove that there is a unique $A \in \mathscr{P}(U)$ such that for every $B \in \mathscr{P}(U), A \cup B = A$
+\begin{proof}
+Let $A = U$, then it is clear that for any set $B \in \mathscr{P}(U), A \cup B = A$, since $U\cup B= U$ because $B \subseteq U$. $ $\\
+To prove uniqueness suppose that $z \in \mathscr{P}(U)$ and for all $B \in \mathscr{P}(U), Z \cup B = Z$. Then in particular taking $B = U$ we can conclude $Z \cup U = Z$ but since $Z \subseteq U$, $Z \cup U= U$ therefore $Z = U$.
+\end{proof}
+\newpage
+\subsection{10}
+Suppose A is a set, and for every family of sets $\mathscr{F}$, if $\bigcup \mathscr{F} = A$ then $A \in \mathscr{F}$. Prove that A has exactly one element.
+$ $\\
+Part 1 \textbf{At least one element} 
+\begin{proof}
+Proof by contra-positive, suppose $A = \emptyset$ and F is empty then clearly $\bigcup \mathscr{F} = \emptyset$. It follows that  $A \in \mathscr{F}$ is false. Therefore $\bigcup \mathscr{F} = A$ then $A \in \mathscr{F}$ and then $A \neq \emptyset$, A has at least one element.
+\end{proof}
+$ $\\
+Part 2 \textbf{Can't have more than one element
+}
+\begin{proof}
+Proof by contra-positive. Suppose A has more than one element. Let $x \in A$, and $\mathscr{F} = \{ \{x\}, A \setminus \{x\} \}$. Then $\bigcup \mathscr{F} = A$, but $A \notin \mathscr{F}$ since $A \notin \{ \{x\}, A \setminus \{x\} \}$. Therefore for every family of sets $\mathscr{F}$, if $\bigcup \mathscr{F} = A$ then $A$ in $\mathscr{F}$ is false. We conclude that A cannot have more than one element.
+\end{proof}
+\textbf{Since A needs to have at least one element but cannot have more than one, A must contain only one element.}
+\subsection{13}
+(a)Prove that there is a unique real number $c$ such that there is a unique real number $x$ such that $x^2 + 3x + c =0$. (In other words, there is a unique real number $c$ such that the equation $x^2 + 3x + c = 0$ has exactly one solution.)
+\begin{proof}
+Suppose $c$ is $9 / 4$, now let $x$ be an arbitrary real number. It follows that $x^2 + 3x + 9/4 = 0$ and therefore $x= -3/2$. To see this solution is unique, suppose $y^2 + 3y + 9/4 = 0$. It is clear that $y= -3/2$. $ $\\
+To see that this is not only particular for c suppose let $d$ be an arbitrary real number such that $x^2 + 3x + d = 0$. We know this equation has only one solution from the above proof, so we apply the quadratic formula and introduce both results into an equation. $x= (-3+\sqrt{9-4d})/2=(-3-\sqrt{9-4d})/2 \Rightarrow -3+ \sqrt{9-4d}= -3-\sqrt{9-4d} \Rightarrow 2\sqrt{9-4d}=0 \Rightarrow 9-4d=0$ and therefore $d=9/4$. We conclude that $c=d$ and therefore $9/4$ is a unique solution.
+\end{proof}$ $\\
+(b)Show that it is not the case that there is a unique real number $x$ such that there is a unique real number $c$ such that $x^2 + 3x + c = 0$. (Hint: You should be able to prove that for \textit{every} real number $x$ there is a unique real number $c$ such that .)
+\begin{proof}
+Suppose $x$ is an arbitrary real number. Now let $c=-(x^2+3x)$. Substituting $c$ in the equation we get $x^2 + 3x -(x^2 + 3x) =0$, proving the existence of a real number $c$ that fulfills $x^2 + 3x + c = 0$. $ $\\ To prove for uniqueness let $i$ be a real number such that $x^2 +3x +i = 0$ and let $j$ be a real number such that $x^2 +3x +j = 0$. Since both of these equations are equal to 0 we can say that $x^2 +3x +i = x^2 +3x +j \Rightarrow x^2 +3x - (x^2 +3x)+i=j \Rightarrow i=j $. Therefore  this solution is unique. $ $\\ 
+\textbf{Since all values of x satisfy this condition, then it is not the case that there is a unique real number $x$ such that there is a unique real number $c$ such that $x^2 + 3x + c = 0$}
+\end{proof}
+\newpage
+\section{3.7}
+
+\subsection{6}
+Suppose $\mathcal{F}$ is a nonempty family of sets. Let $I=\bigcup \mathcal{F}$ and $J=\bigcap \mathcal{F}$. Suppose also that $J \neq \emptyset$, and notice that it follows that for every $X \in \mathcal{F}$, $X \neq \emptyset$, and also that $I \neq \emptyset$. Finally, suppose that $\{A_i | i \in I \}$ is an indexed family of sets. $ $\\
+(a)Prove that $\bigcup_{i\in I}A_i=\bigcup_{X\in \mathcal{F}}(\bigcup_{i\in X}A_i)$ \begin{proof}$ $\\
+
+$(\rightarrow)$Suppose there is an arbitrary $x$ in $\bigcup_{i \in I} A_i$. Using the definition of an indexed family and the definition of $I$, we know that there is a $i$ such that there is an $X$ such that $X \in \mathcal{F}$ and $i \in X$ and $x \in A_i$. Now using the definition of an indexed family we see that; there is an $X \in \mathcal{F}$ such that $x \in \bigcup_{i \in X}A_i$. Ultimately we conclude, using again the definition of an indexed family,  that $x \in \bigcup_{X\in \mathcal{F}}(\bigcup_{i\in X}A_i)$.
+
+$(\leftarrow)$Suppose there is an arbitrary $x$ in $\bigcup_{X\in \mathcal{F}}(\bigcup_{i\in X}A_i)$. Using the definition of an indexed family we see that there is an $X \in \mathcal{F}$ such that $(\bigcup_{i\in X}A_i)$. Using again the definition of an indexed family we conclude that there is an $i$ such that there is an $X$ such that $X \in \mathcal{F}$ and $i \in X$ and $x \in A_i$. Since there is an $X$ such that $X \in \mathcal{F}$ and $i \in X$ we see that $i \in \bigcup \mathcal{F}$, but since we know that $I = \bigcup \mathcal{F}$ we conclude that $i \in I$. Finally using the definition again we see that there is an $i \in I$ such that $x \in A_i$, therefore $x \in \bigcup_{i \in I} A_i$.
+\end{proof}$ $\\
+(b)Prove that $\bigcap_{i\in I}A_i=\bigcap_{X\in \mathcal{F}}(\bigcap_{i\in X}A_i)$
+\begin{proof}$ $\\
+
+$(\rightarrow)$Suppose there is an arbitrary $x$ in $\bigcap_{i\in I}A_i$. It follows that for all $i$ if $i \in I$ then $x \in A_i$. Since $I=\bigcup \mathcal{F}$ then $i \in \bigcup \mathcal{F}$. Now we see that  for all $i$ there is an $X$ such that $X \in \mathcal{F}$ and $i \in X$, or $x \in A_i$. Using the definition of implication we see that for all $X$ such that $X \notin \mathcal{F}$ or  for all $i$ such that $i \notin X$ or $x \in A_i$. Finally using the definition of implication and indexed family we see that for all $X$ such that if $X \in \mathcal{F}$ then  $(\bigcap_{i\in X}A_i)$, or in other words $x \in \bigcap_{X\in \mathcal{F}}(\bigcap_{i\in X}A_i)$.
+
+
+$(\leftarrow)$Suppose there is an arbitrary $x$ in $\bigcap_{X\in \mathcal{F}}(\bigcap_{i\in X}A_i)$. By using the definition of indexed family it follows that for all $X$ such that if $X \in \mathcal{F}$ then $(\bigcap_{i\in X}A_i)$. Using the definition of indexed family again and the definition of implication we see that, for all $X$ such that $X \notin \mathcal{F}$ or for all $i$ such that if $i \in X$ then $x \in A_i$. Using the definition of implication we see that for all $X$  such that $X \notin \mathcal{F}$ or for all $i$ such that $i \notin X$ or $x \in A_i$. Then using de morgans law and implication we see that for all $i$ such that there is an $X$ such that if $X \in \mathcal{F}$ and $i \in X$ then $x \in A_i$. Now since we know that $I=\bigcup \mathcal{F}$ we see that for all $i$ such that if $i \in I$ then $x \in A_i$. Finally suing the definition of indexed family we conclude that $x \in x \bigcap_{i\in I}A_i$.
+\end{proof}$ $\\
+(c)Prove that $\bigcup_{i\in J}A_i \subseteq \bigcap_{X\in \mathcal{F}}(\bigcup_{i\in X}A_i)$. Is it always the case that $\bigcup_{i \in J}A_i=\bigcap_{X \in \mathcal{F}}(\bigcup_{i\in X}A_i)$? Give either a proof or a counterexample to justify your answer.$ $\\
+
+\begin{proof}
+Suppose there is an arbitrary $x$ in $\bigcup_{i\in J}A_i$. It follows that there is some $i$ such that $i \in J$ and $x \in A_i$. Since $J=\bigcap \mathcal{F}$ we conclude that there is a $i$ such that for all $X$ if $X \in \mathcal{F}$ then $i \in X$ and $x \in A_i$. Suppose $X \in F$ then we have that $x \in \bigcup_{i\in X}A_i$, but since X was arbitrary and $X \in F$ we conclude that $x$ in$\bigcap_{X\in \mathcal{F}}(\bigcup_{i\in X}A_i)$. Since $x$ was arbitrary $\bigcup_{i\in J}A_i \subseteq \bigcap_{X\in \mathcal{F}}(\bigcup_{i\in X}A_i)$.
+
+It is not always the case. Counter-example: $\mathcal{F}=\{\{1\},\{2\}\}$ and $A_1=\{a,b\}$ and $A_2=\{b\}$.
+It follows that $\{a,b\}\nsubseteq \{b\}$, so it is not an equality.
+\end{proof}
+$ $\\
+\newpage
+(d) Discover and prove a theorem relating $\bigcap_{i \in J}A_i$ and $\bigcup_{X \in \mathcal{F}}(\bigcap_{i\in X}A_i)$.
+
+Let's prove $\bigcup_{X \in \mathcal{F}}(\bigcap_{i\in X}A_i) \subseteq \bigcap_{i \in J}A_i$.
+
+\begin{proof}
+Suppose there is an arbitrary $x$ in $\bigcup_{X \in \mathcal{F}}(\bigcap_{i\in X}A_i)$. It follows there exist an $X$ such that $X \in \mathcal{F}$ and for all $i$ if $i \in X$ then $x \in A_i$. Assume $i \in X$, it follows that $x \in A_i$ and notice that $i \in \mathcal{F}$ so $i \in \bigcap \mathcal{F}$. Therefore we can conclude that $x \in \bigcap_{i \in J}A_i$, and since x was arbitrary $\bigcup_{X \in \mathcal{F}}(\bigcap_{i\in X}A_i) \subseteq \bigcap_{i \in J}A_i$.
+\end{proof}
+\subsection{10}
+Consider the following putative theorem.
+
+\textbf{Theorem?} \textit{There are irrational numbers a and b such that $a^b$ is rational}
+
+Is the following proof correct? If so, what proof strategies does it use? If not, can it be fixed? Is the theorem correct? (Note: The proof uses the fact that $\sqrt{2}$ is irrational, which we'll prove in Chapter 6 - see Theorem 6.4.5.)
+
+\begin{proof}
+Either $\sqrt{2}^{\sqrt{2}}$ is rational or it's irrational. 
+
+Case 1. $\sqrt{2}^{\sqrt{2}}$ is rational.Let $a=b=\sqrt{2}$. Then $a$ and $b$ are irrational, and $a^b=\sqrt{2}^{\sqrt{2}}$, which we are assuming in this case is rational.
+
+Case 2. $\sqrt{2}^{\sqrt{2}}$ is irrational. Let $a = \sqrt{2}^{\sqrt{2}}$ and $b = \sqrt{2}$. Then $a$ is irrational by assumption, and we know that $b$ is also irrational. Also, $a^b=(\sqrt{2}^{\sqrt{2}})^{\sqrt{2}}=\sqrt{2}^{(\sqrt{2}\centerdot\sqrt{2})}=(\sqrt{2})^{2}=2$, which is rational.
+\end{proof}
+
+\textbf{The proof is correct. It finds a value to fulfill the existential part of the proof, and then in proof this value is correct by considering all the possible conclusions that this value can give.}
+
+\section{4.1}
+\subsection{3}
+The truth sets of the following statements are subsets of $\mathds{R}^2$. List a few elements of each truth set. Draw a picture showing all the points in the plane whose coordinates are in the truth set.\\
+(a)$y=x^2-x-2$\\
+$\{(0,-2),(1,-2),(-1,0)...\}$ $ $\\
+(b)$y<x$\\
+$\{(-1,-2),(0,-1),(1,0),(2,1)...\}$ $ $\\
+(c)Either $y=x^2-x-2$ or $y=3x-2$\\
+$\{(0,-2),(1,-2),(1,1),(2,4)...\}$ $ $\\
+(d) $y<x$, and either $y=x^2-x-2$ or $y=3x-2$\\
+$\{(0,-2),(1,-2),(-1,0),(-1,-5)...\}$ $ $\\
+\newpage
+\subsection{5}
+Prove parts 2 and 3 of Theorem 4.1.3.
+\\
+(2)$A \times (B \cup C) = (A \times B) \cup (A \times C)$
+\begin{proof}$ $\\
+$(\rightarrow)$Let $z$ be an arbitrary element of $A \times(B \cup C)$. Then by the definition of Cartesian product $z \in A \times(B \cup C)$. In other words $z=(x,y)$ such that $x \in A$ and $y \in B$ or $y \in C$.\\
+Case 1. $y \in B$. Since $x \in A$ we can say that $z \in (A \times B)\cup (A \times C)$.\\
+Case 2. $y \in C$. Since $x \in A$ we can say that $z \in (A \times B)\cup (A \times C)$.\\
+Since $z$ was an arbitrary element of $A \times (B \cup C)$, it follows that  $ A \times (B \cup C)\subseteq(A \times B) \cup(A \times C)$.$ $\\
+$ $\\
+$(\leftarrow)$Now let $z$ be an arbitrary element of $(A \times B) \cup (A \times C)$. Then $z \in (A \times B)$ or $z \in (A \times C)$.\\
+Case 1. $z \in A \times B$. Since $x \in A$ and $y \in B$ we can say that $A \times (B \cup C)$.\\
+Case 2, $z \in A \times C$. Since $x \in A$ and $y \in C$ we can say that $A \times (B \cup C)$.\\
+Since $z$ was an arbitrary element of $(A \times B)\cup (A \times C)$, it follows that $(A \times B)\cup (A \times C) \subseteq A \times (B \cup C)$.$ $\\
+
+Since  $ A \times (B \cup C)\subseteq(A \times B) \cup(A \times C)$ and $(A \times B)\cup (A \times C) \subseteq A \times (B \cup C)$, we conclude that $A \times (B \cup C) = (A \times B) \cup (A \times C)$.
+\end{proof}$ $\\
+(3)$(A \times B) \cap (C \times D)=(A \cap C)\times (B \cap D)$.
+\begin{proof}$ $\\
+$(\rightarrow)$Let j be an arbitrary element of $(A \times B) \cap (C \times D)$. Then $j=(x,y)$ and by the definition of Cartesian product, $x \in A$, $y \in B$ and $x \in C$, $y \in D$. It follows that $x \in (A \cap C)$ and $y \in (B \cap D)$ using the definition of Cartesian product we can see that $j \in (A \cap C) \times (B \cap D)$ and since $j$ was arbitrary $(A \times B) \cap (C \times D) \subseteq (A \cap C) \times (B \cap D)$. \\
+$(\leftarrow)$Let $j$ be an arbitrary element of $(A \cap C) \times (B \cap D)$. Then $j= (x,y)$ and by the definition of Cartesian product we see that $x \in A$ and $x \in C$ and $y \in B$ and $y \in D$. We can therefore see that $j \in (A \times B)$ and $j \in (C \times D)$, so $j \in (A \times B)\cap (C \times D)$ and since $j$ was arbitrary $(A \cap C)\tiomes (B \cap D) \subseteq (A \times B) \cap (C \times D)$.
+
+Since $(A \times B) \cap (C \times D) \subseteq (A \cap C) \times (B \cap D)$ and $(A \cap C)\tiomes (B \cap D) \subseteq (A \times B) \cap (C \times D)$, we conclude that $(A \times B) \cap (C \times D)=(A \cap C)\times (B \cap D)$.
+
+\end{proof}
+\subsection{6}
+What's wrong with the following proof that for any sets A, B, C, and D, $(A \cup C) \times (B \cup D) \subseteq(A \times B)\cup (C \times D)$?(Note that this is the reverse of the inclusion in part 4 of Theorem 4.1.3.)\\
+
+\begin{proof}
+Suppose $(x,y)\in (A \cup C) \times (B \cup D)$. Then $x \in A \cup C$ and $y \in B \cup D$, so either $x \in A$ or $x \in C$, and either $y \in B$ or $y \in D$. We consider these cases separately.
+
+Case 1. $x \in A$ and $y \in B$. Then $(x,y) \in A \times B$.
+
+
+Case 2. $x \in C$ and $y \in D$. Then $(x,y) \in C \times D$.\\
+Thus, either $(x,y)\in A \times B$ or $(x,y)\in C \times D$, so $(x,y)\in (A \times B)\cup (C \times D)$.
+\end{proof}
+
+\textbf{The problem is this proof is not exhaustive. It does not take into account all the possible combinations of elements in the sets.}
+\subsection{7}
+If A has $m$ elements and B has $n$ elements, how many elements does $A \times B$ have?
+\textbf{It will have $m \times n$ elements for instance if $m=2$ and $n=3$ then $A \times B$ will have 6 elements.}
+\subsection{8}
+Is it true that for any sets A, B, and C, $A \times (B \setminus C)=(A \times B)\setminus(A \times C)$?\\
+Give either a proof or a counter-example to justify your answer.
+
+\textbf{It is true}.
+
+\begin{proof}$ $\\
+$(\rightarrow)$Let some element $(x,y)$ in $A \times (B \setminus C )$, it follows that $x \in A$ and $y \in B$ but $y \notin C$. Now we see that $(x,y) \in (A \times B)$ but $(x,y)\notin (A \times B)$, so $(x,y)\in (A \times B)\setminus(A \times C)$. Since $(x,y)$ was arbitrary, $A \times (B \setminus C) \subseteq (A \times B)\setminus(A \times C)$.
+\\
+$(\leftarrow)$Let some element $j$ be in $(A \times B)\setminus(A \times C)$ then $j \in (A \times B)$ but $j \notin (A \times C)$. So by using the definition of Cartesian product we see that $x \in A$ and $y \in B$, \textbf{Negating $(A \times C)$ using De Morgan results in} but $x \notin A$ or $y \notin C$; we saw that $x \in A$ therefore $y$ must not be in C. It follows that $(x,y)\in A \times (B \setminus C)$. And since $(x,y)$ was arbitrary we conclude that $(A \times B) \setminus(A \times C)\subseteq A \times (B \setminus C)$.\
+
+
+In conclusion $A \times (B \setminus C)=(A \times B)\setminus(A \times C)$.
+\end{proof}
+\subsection{12}
+Prove that for any sets A, B, C, and D, if $A\times B$ and $C \times D$ are disjoint, then either A and C are disjoint or B and D are disjoint.
+\begin{proof} 
+Suppose  $A\times B$ and $C \times D$ are disjoint, and suppose to the contrary that $A \cap C = \emptyset$ and $B \cap D = \emptyset$. Let $x  \in A \cap C$ and $y \in B \cap D$; it follows that $x \in A$,$x \in C$,$y \in B$, and $y \in D$. Now we can see that $(x,y) \in A\times B$ and $(x,y) \in C \times D$, but this is a contradiction since we assumed $A\times B$ and $C \times D$ are disjoint so they
+cannot share elements.
+
+$ $\\ Therefore if $A\times B$ and $C \times D$ are disjoint, then either $A \cap C$ are disjoint or $B \cap D$ are disjoint.
+\end{proof}
+\subsection{13}
+Suppose $I \neq \emptyset$. Prove that for any indexed family of sets $\{A_i|i \in I \}$ and any set B, $(\bigcap_{i \in I}A_i)\times B = \bigcap_{i \in I}(A_i \times B)$. Where in the proof does the assumption that $I \neq \emptyset$ get used?
+
+\begin{proof}$ $\\
+
+$(\rightarrow)$Assume $I \neq \emptyset$ \textbf{This is so that the intersection is defined}. Now let some $(x,y) \in (\bigcap_{i \in I}A_i)\times B$. It follows that for all $i$ such that if $i \in I$ then $x \in A_i$, and $y \in B$. Since $I \neq \emptyset$ we assume that $i \in I$ and therefore $x \in A_i$. We see that $(x,y) \in \bigcap_{i \in I}(A_i \times B)$. And since $(x,y)$ was arbitrary, $(\bigcap_{i \in I}A_i)\times B \subseteq \bigcap_{i \in I}(A_i \times B)$
+
+$(\leftarrow)$Assume $I \neq \emptyset$ \textbf{This is so that the intersection is defined}. Now let some $(x,y) \in \bigcap_{i \in I}(A_i \times B)$. It follows that for all $i$ such that if $i \in I$ then $x \in A_i \cap y \in B$. Since $I \neq \emptyset$ we assume that $i \in I$ and therefore $x \in A_i$ and $y \in B$. We see that $(x,y) \in (\bigcap_{i \in I}A_i)\times B$. And since $(x,y)$ was arbitrary $\bigcap_{i \in I}(A_i \times B) \subseteq (\bigcap_{i \in I}A_i)\times B$.
+
+In conclusion $(\bigcap_{i \in I}A_i)\times B = \bigcap_{i \in I}(A_i \times B)$.
+
+\textbf{If $I = \emptyset$ then everything, absolutely everything can be contained inside $(\bigcap_{i \in I}A_i)$. Because if I is empty, then we know that $i \in I$ is always false and therefore since the hypothesis is false   $(\bigcap_{i \in I}A_i)$ is always true. This is amazing once you analyse it you can even say $(\bigcap_{i \in I}A_i) \in (\bigcap_{i \in I}A_i)$}
+\end{proof}
+\newpage
+\subsection{15}
+This problem was suggested by Professor Alan Taylor of Union College, NY. Consider the following putative theorem.\\
+
+\textbf{Theorem?} \textit{For any sets A, B, C, and D, if $A \times B \subseteq C \times D$ then $A \subseteq C$ and $B \subseteq D$}.\\
+
+Is the following proof correct? If so, what proof strategies does it use? If not, can it be fixed? Is the theorem correct?
+
+\begin{proof}
+Suppose $A \times B \subseteq C \times D$. Let $a$ be an arbitrary element of A and let $b$ be an arbitrary element of B. Then $(a,b)\in A \times B$, so since $a$ and $b$ were arbitrary elements of A and B, respectively, this shows that $A \subseteq C$ and $B \subseteq D$.
+\end{proof}
+
+\textbf{The theorem is false. Counter-example:  Suppose $A=\{x\}, B=\emptyset, C=\emptyset, D=\emptyset$ so $A \times B= \emptyset \subseteq C \times D = \emptyset  $ then $\{x\}\nsubseteq \emptyset$ and $\emptyset \subseteq \emptyset$. It cannot be fixed unless the theorem itself is fixed to take into account cases like this.}
+
+\section{4.2}
+\subsection{5}
+Suppose that $A = \{1,2,3\}, B = \{4,5,6 \},R = \{(1,4), (1,5),(2,5),(3,6)\}$ and $S=\{(4,5),(4,6),(5,4),(6,6)\}$. Note that $R$ is a relation from $A$ to $B$ and $S$ is a relation from $B$ to $B$. Find the following relations:
+
+(a)$S \circ R$.
+
+$S \circ R=\{(1,5),(1,6),(1,4),(2,4),(3,6)\}$
+
+
+(b)$S \circ S^{-1}$
+
+$S \circ S^{-1}= \{(5,5),(5,6),(6,5),(6,6),(4,4),(6,6)\}$
+\newpage
+\subsection{7}
+(a) Prove part 3 of Theorem 4.2.5 by imitating the proof of part 2 in the text.
+Suppose R is a relation from A to B, S is a relation from B to C, and T is a relation from C to D. Then:
+
+
+(1) $(R^{-1})^{-1}=R$
+
+
+(2) $Dom(R^{-1})= Ran(R)$
+
+
+(3) $Ran(R^{-1})=Dom(R)$
+
+(4) $T \circ (S \circ R)= (T \circ S) \circ R$
+
+(5)$(S \circ R)^{-1}= R^{-1} \circ S^{-1}$
+\begin{proof}
+    Let $a$ be an arbitrary element of A. Then 
+
+    $$a \in Ran(R^{-1}) \leftrightarrow \exists b \in B ((b,a)\in R^{-1})$$
+    $$ \leftrightarrow \exists b \in B((a,b)\in R)$$
+    $$\leftrightarrow a \in Dom(R)$$
+
+    So $Ran(R^{-1}) \equiv Dom(R)$
+\end{proof}
+
+(b) Give an alternative proof of part 3 of Theorem 4.2.5 by showing that it follows  from parts 1 and 2.
+
+$ $
+
+
+The statement we want to prove is $Ran(R^{-1})= Dom(R)$
+\begin{proof}
+    We know $Dom(R^{-1})=Ran(R)$
+    but it follows from $(R^{-1})^{-1}=R$ that $Dom((R^{-1})^{-1})=Dom(R)=Ran(R^{-1})$.
+\end{proof}
+
+(c) Complete the proof of part 4 of Theorem 4.2.5.
+
+$ $
+
+We will proof the $(\leftarrow)$ of $T \circ (S \circ R)= (T \circ S )\circ R$
+\begin{proof}
+Suppose  $(a,d) \in (T \circ S) \circ R$ by the definition of composition there is a $b \in B$ such that $(a,b) \in R$ and $(b,d)\in (T \circ S)$. Using the definition we see that there is a $c \in C$ such that $(b,c) \in S$ and $(c,d) \in T$. We can conclude that $(a,c)\in (S \circ R)$ and $(c,d) \in R$, so $(a,d) \in T \circ (S \circ R)$.
+\end{proof}
+
+(d)Prove part 5 of Theorem 4.2.5.
+
+$ $
+
+
+The theorem is $(S \circ R)^{-1}= R^{-1} \circ S^{-1}$, where R is a relation from A to B , S is a relation from B to C.
+
+
+
+\begin{proof}
+
+$ $
+
+$(\rightarrow)$
+
+
+
+    Note that $S \circ R$ is a relation from A to C so $(S \circ R)^{-1}$ is a relation from C to A. Now suppose $(c,a) \in (S \circ R)^{-1}$ then by definition $(a,c) \in (S \circ R)$ and by the rules of composition we know that there is a $b \in B$ such that $(b,c) \in S$ and $(a,b) \in R$, but also $(c,b) \in S^{-1}$ and $(b,a) \in R^{-1}$  and since we know there is a $b \in B$therefore $(c,a) \in R^{-1} \circ S^{-1}$.
+$ $
+
+
+$(\leftarrow)$
+
+Suppose $(c,a) \in R^{-1} \circ S^{-1}$ and by definition there is a $b \in B$ such that $(c,b) \in S^{-1}$ and $(b,a) \in R^{-1}$ notice that these can be rewritten as $(a,b) \in R$ and $(b,c)\in S$ therefore $(a,c) \in S \circ R$ so $(c,a) \in (S \circ R)^{-1}$ without loss of generality.
+
+\end{proof}
+
+\subsection{9}
+Suppose $R$ is a relation from $A$ to $B$ and $S$ is a relation from $B$ to $C$. 
+
+(a) Prove that $Dom(S \circ R) \subseteq Dom(R)$.
+
+(b) Prove that if $Ran(R) \subseteq Dom(S)$ then $Dom(S \circ  R) = Dom(R)$.
+
+(c) Formulate and prove similar theorems about $Ran(S \circ R)$.
+
+\subsection{10}
+Suppose R and S are relations from A to B. Must the following statements be true? Justify your answers with proofs or counterexamples.
+
+(a)$R\subseteq Dom(R) X Ran(R)$
+
+
+(b)If $R \subseteq S$ then $R ^{-1} \subseteq S^{-1}$
+
+
+(c)$(R \cup S)^{-1}= R^{-1} \cup S^{-1}$
+\subsection{11}
+Suppose R is a relation from A to B and S is a relation from B to C. Prove that $S \circ R = \emptyset$ iff $Ran(R)$ and $Dom(S)$ are disjoint.
+
+
+\subsection{12}
+Suppose R is a relation from A to B and S and T are relations from B to C.
+\subsection{13}
+Suppose R and S are relations from A to B and T is a relation from B to C. Must the following statements be true? Justify your answer with proofs or counterexamples.
+
+(a)If R and S are disjoint, then so are $R^{-1}$ and $S^{-1}$.
+
+(b)If R and S are disjoint, then so are $T \circ R$ and $T \circ S$.
+
+(c)If $T \circ R$ and $T \circ S$ are disjoint, then so are $R$ and $S$.
+
+\section{6}
+\subsection{1}
+Prove that for all $n \in \mathbb{N}, 0+1+2+ \dots +n=n(n+1)/2$
+
+\begin{proof}$ $\\
+    Base case: When n=0 we have $0=(0+1)/2=0$.
+
+    Induction Hypothesis: Suppose $0+1+2+\dots+n=n(n+1)/2$.
+
+    
+    Induction Step:
+
+    $$0+1+2+\dots+n+(n+1)$$
+    $$=[n(n+1)]/2+(n+1)$$
+    $$=[n(n+1)]/2 + [2(n+1)]/2$$
+    $$=[n(n+1)+2(n+1)]/2$$
+    $$=[(n+1)(n+2)]/2$$
+\end{proof}
+\newpage
+\subsection{2}
+Prove that for all $n\in \mathbb{N},0^2+1^2+2^2+\dots+n^2=n(n+1)(2n+1)/6$
+
+\begin{proof}$ $\\
+Base case: When $n=0$ we have $0^2=0=[0(0+1)(2(0)+1)]/6=0$.
+
+Induction hypothesis: Let $n$ be arbitrary and suppose $0^2+1^2+2^2+\dots+n^2=[n(n+1)(2n+1)]/6$.
+
+Induction step: 
+$$0^2+1^2+2^2+ \dots + n^2 +(n+1)^2$$
+$$=[n(n+1)(2n+1)]/6+[6(n^2+2n+1)]/6$$
+$$=[(n+1)(2n^2+n)+6(n^2+2n+1)]/6$$
+$$=[(n+1)(2n^2+7n+6)]/6$$
+$$=[(n+1)(n+2)(2n+3)]/6$$
+
+
+    
+\end{proof}
+\subsection{4}
+Find a formula for $1+3+5+\dots+(2n-1), for n \geq 1$, and prove that your formula is correct.(Hint: Firs try some particular values of n and look for a pattern.)
+
+
+
+
+\textbf{The formula is $1+3+5+\dots+(2n-1)=n^2$.}
+\begin{proof}$ $\\
+    Base case: When $n=1$ then $1=1^2=1$.
+
+    Induction Hypothesis: Take $n$ arbitrary and suppose $1+3+5+\dots+(2n-1)=n^2$
+
+    Induction Step:
+    $$1+3+5+\dots+(2n-1)+(2(n+1)-1)$$
+    $$=1+3+5+\dots+(2n-1)+(2n+1)$$
+    $$=n^2+2n+1$$
+    $$=(n+1)^2$$
+\end{proof}
+\subsection{7}
+Find a formula for $3^0+3^1+3^2+ \dots +3^n$, for $n \geq 0$, and prove that your formula is correct.(Hint: Try to guess the formula, basing your guess on Example 6.1.1. Then try out some values of $n$ and adjust your guess if necessary.)
+
+\textbf{The formula is: $(3^{n+1}-1)/2$}
+\begin{proof}Proof by induction. $ $\\
+    Base case: Take $n=0$ then $3^0=1=(3^1-1)/2=2/2=1$
+
+    Induction Hypothesis: Suppose $3^0+3^1+3^2+\dots+3^n=(3^{n+1}-1)/2$.
+
+    Induction Step: 
+    $$3^0+3^1+3^2+\dots+3^n+3^{n+1}$$
+    $$=(3^{n+1}-1)/2 + 3^{n+1}$$
+    $$=(3^{n+1}+2(3^{n+1})-1)/2$$
+    $$=(3^{n+1}(1+2)-1)/2$$
+    $$=(3^{n+1}(3)-1)/2$$
+    $$=(3^{n+2}-1)/2$$
+    
+\end{proof}
+\subsection{9}
+
+(a)Prove that for all $n\in \mathbf{N},2|(n^2+n).$
+\begin{proof} By induction.
+    Base case: When $n=0$, $n^2+n=0$ and 2 divides 0 so the statement is true.
+
+    Induction Hypothesis: Suppose $2|(n^2+n)$
+    Induction Step: 
+    Pose $$(n+1)^2+(n+1)$$
+    $$=n^2+2n+1+n+1$$
+    $$=n^2+n+2n+2$$
+    $$=n^2+n+2(n+1)$$
+    By induction Hypothesis $n^2+n$ is divisible by 2 and it is clear that $2|2(n+1)$ so $2|(n+1)^2+n+1$.
+\end{proof}
+(b)Prove that for all $n \in \mathbf{N},6|(n^3-n).$
+\begin{proof} By induction.
+    Base case: When $n=0$, $n^3-n=0$ and 6 divides 0 so the statement is true.
+
+    Induction Hypothesis: Suppose $6|(n^3-n)$
+    Induction Step: 
+    Pose $$(n+1)^3-(n+1)$$
+    $$=n^3+3n^2+3n+1-n-1$$
+    $$=n^3-n+3n^2+3n$$
+    $$=n^3-n+3n(n+1)$$
+    By induction Hypothesis $n^3-n$ is divisible by 6 and since either $n$ or $n+1$ is even then $n(n+1)$ is divisible by 2. So we can say that $n(n+1)=2a$ where $a \in \mathbf{N}$; It is clear then that $3(2a)=6a$ is divisible by 6. Therefore $6|(n+1)^3-(n+1)$
+\end{proof}
+\subsection{15}
+Prove that for all $n\geq 10, 2^n>n^3$.
+
+\begin{proof}Proof by induction. $ $\\
+Base Case: Take $n=10$ then $2^10=1024>1000=10^3$.
+
+Induction Hypothesis: Suppose $2^n>3^n$.
+
+Induction Step:
+$$2^{n+1}=2 \cdot 2^n$$
+$$>2n^3$$
+$$=n^3+n^3$$
+$$\geq n^3 + 10n^2$$
+$$=n^3+3n^2+7n^2$$
+$$\geq n^3 +3n^2+70n$$
+$$=n^3+3n^2+3n+67n$$
+$$>n^3+3n^2+3n+1=(n+1)^3$$
+\end{proof}
+\end{document}
